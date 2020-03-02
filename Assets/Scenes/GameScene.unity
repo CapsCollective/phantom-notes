@@ -240,6 +240,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0124
       objectReference: {fileID: 0}
+    - target: {fileID: 6725314470276142370, guid: b816e252378bc4c27aa50746d4459acd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725314470276142370, guid: b816e252378bc4c27aa50746d4459acd,
+        type: 3}
+      propertyPath: _opacity
+      value: 0.207
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b816e252378bc4c27aa50746d4459acd, type: 3}
 --- !u!1 &1092591257
@@ -310,7 +320,6 @@ MonoBehaviour:
     trackLength: 9.6
   - track: {fileID: 0}
     trackLength: 9.6
-  IsFlash: 0
 --- !u!1001 &8467373167815775683
 PrefabInstance:
   m_ObjectHideFlags: 0
