@@ -38,8 +38,13 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="BPM.cs" t="Include" />
+          <e p="CharController0.cs" t="Include" />
           <e p="EnemyInstrument.cs" t="Include" />
+          <e p="Flicker.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="AlphaSelfIllum.shader" t="Include" />
         </e>
         <e p="VacuumShaders" t="Include">
           <e p="Subsurface Scattering Shader" t="Include">
