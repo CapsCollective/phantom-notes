@@ -139,4 +139,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDistance: 1.5
   hooverDistance: 4
-  hooverSpeed: 50
+  hooverSpeed: 20

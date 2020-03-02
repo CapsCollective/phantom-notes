@@ -10,8 +10,6 @@ public class PickupInstrument : MonoBehaviour
     public float hooverSpeed;
     
     private PlayerController player;
-    private float i = 0;
-    private float rate = 0;
 
     private void Start()
     {
@@ -28,12 +26,10 @@ public class PickupInstrument : MonoBehaviour
         }
         else if (playerDistance < hooverDistance)
         {
-            rate = 1/hooverSpeed;
-            if (i < 1)
-            {
-                i += Time.deltaTime * rate;
-                transform.position = Vector3.Lerp(transform.position, player.transform.position, i);
-            }
+            transform.position = Vector3.MoveTowards(
+                transform.position, 
+                player.transform.position, 
+                hooverSpeed * Time.deltaTime);
         }
     }
 }
