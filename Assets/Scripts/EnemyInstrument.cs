@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyInstrument : MonoBehaviour
 {
     public GameObject pickupPrefab;
+    public float knockBack;
     
     private PlayerController player;
     private float time = 500;
@@ -18,18 +19,22 @@ public class EnemyInstrument : MonoBehaviour
 
     void Update()
     {
+        var velocity = new Vector3();
         rate = 1/time;
         if (i < 1)
         {
             i += Time.deltaTime * rate;
-            transform.position = Vector3.Lerp(transform.position, player.transform.position, i);
+            velocity = Vector3.Lerp(transform.position, player.transform.position, i);
+            transform.position = velocity;
         }
 
         transform.LookAt(player.transform);
         
-        if (Input.GetKeyUp(KeyCode.K)) {
-            Instantiate(pickupPrefab, transform.position, transform.rotation);
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             Destroy(gameObject,0);
+            newObj.GetComponent<Rigidbody>().velocity = velocity*knockBack;
         }
     }
 }
