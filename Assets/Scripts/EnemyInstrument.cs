@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class EnemyInstrument : MonoBehaviour
 {
+    public GameObject pickupPrefab;
+    
     private PlayerController player;
     private float time = 500;
     private float i = 0;
     private float rate = 0;
-
-    // Update is called once per frame
-
-
 
     private void Start()
     {
@@ -28,5 +26,10 @@ public class EnemyInstrument : MonoBehaviour
         }
 
         transform.LookAt(player.transform);
+        
+        if (Input.GetKeyUp(KeyCode.K)) {
+            Instantiate(pickupPrefab, transform.position, transform.rotation);
+            Destroy(gameObject,0);
+        }
     }
 }
