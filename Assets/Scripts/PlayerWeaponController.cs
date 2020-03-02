@@ -54,5 +54,9 @@ public class PlayerWeaponController : MonoBehaviour
             var angles = transform.localEulerAngles;
             transform.localEulerAngles = new Vector3(angles.x, angles.y,  angles.z + 360 / 3);
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            
+        }
     }
 }
