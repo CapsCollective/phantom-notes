@@ -14,13 +14,16 @@ public class PlayerWeaponController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        foreach (GameObject obj in weaponArray)
+        {
+            obj.SetActive(obj == weaponArray[(int) currentWeapon]);
+        }
+        
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            
             changingWeapon = true;
             targetRot += 120 % 360;
             currentWeapon = GetWeapon(1);
-            weaponArray[(int) currentWeapon].SetActive(true);
         }
 
         if (changingWeapon)
