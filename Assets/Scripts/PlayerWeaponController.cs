@@ -10,8 +10,7 @@ public class PlayerWeaponController : MonoBehaviour
     private Instrument currentWeapon = Instrument.Flute;
     private bool changingWeapon = false;
     private float targetRot = 0;
-
-    // Update is called once per frame
+    
     void Update()
     {
         foreach (GameObject obj in weaponArray)
@@ -50,6 +49,11 @@ public class PlayerWeaponController : MonoBehaviour
 
     Instrument GetWeapon(int offset)
     {
-        return (Instrument) (((int) currentWeapon + offset) % 3);
+        var rawValue = (int) currentWeapon + offset;
+        if (rawValue < 0)
+        {
+            rawValue += 3;
+        }
+        return (Instrument) (rawValue % 3);
     }
 }

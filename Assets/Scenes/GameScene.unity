@@ -225,6 +225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
+        type: 3}
+      propertyPath: weaponArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 1792352908}
     - target: {fileID: 6387277825286763412, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_IsActive
@@ -320,6 +325,12 @@ MonoBehaviour:
     trackLength: 9.6
   - track: {fileID: 0}
     trackLength: 9.6
+--- !u!1 &1792352908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1221633563520775500, guid: b816e252378bc4c27aa50746d4459acd,
+    type: 3}
+  m_PrefabInstance: {fileID: 820984880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8467373167815775683
 PrefabInstance:
   m_ObjectHideFlags: 0
