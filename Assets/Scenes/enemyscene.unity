@@ -213,6 +213,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212364260}
+  - component: {fileID: 212364261}
+  - component: {fileID: 212364262}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -236,6 +238,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &212364261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212364259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b10d0950633c7449891ea1d42858ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charController: {fileID: 0}
+--- !u!143 &212364262
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212364259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &407808714
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +468,6 @@ GameObject:
   - component: {fileID: 696864933}
   - component: {fileID: 696864932}
   - component: {fileID: 696864931}
-  - component: {fileID: 696864930}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -457,24 +489,6 @@ Transform:
   m_Father: {fileID: 212364260}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &696864930
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696864928}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &696864931
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -723,10 +737,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 212364259}
+    - target: {fileID: 2591707537060502531, guid: 630d5e458038c4b4abe233c0dbba3021,
+        type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4168288642035065837, guid: f02f8cf3caf134298940fcdbbc796300,
+        type: 3}
     - target: {fileID: 2591707537060502532, guid: 630d5e458038c4b4abe233c0dbba3021,
         type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: EnemyInstrument
       objectReference: {fileID: 0}
     - target: {fileID: 2591707537060502591, guid: 630d5e458038c4b4abe233c0dbba3021,
         type: 3}
