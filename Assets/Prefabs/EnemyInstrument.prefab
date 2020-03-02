@@ -106,6 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f419df8270644ee99178bbcf310ccd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupPrefab: {fileID: 4168288642035065837, guid: f02f8cf3caf134298940fcdbbc796300,
+  pickupPrefab: {fileID: 4168288642035065837, guid: 8698809a0ac4bf5478ba753455409f3b,
     type: 3}
   knockBack: 1.2
