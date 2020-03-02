@@ -289,6 +289,7 @@ MonoBehaviour:
     trackLength: 9.6
   - track: {fileID: 0}
     trackLength: 9.6
+  IsFlash: 0
 --- !u!1001 &8467373167815775683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -296,6 +297,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1637190493152976731, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
+        type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 2591707537060502532, guid: 630d5e458038c4b4abe233c0dbba3021,
+        type: 3}
     - target: {fileID: 8467373167343687588, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
