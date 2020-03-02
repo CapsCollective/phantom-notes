@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyInstrument : MonoBehaviour
 {
     public GameObject player;
-    private float time = 100;
+    private float time = 500;
     private float i = 0;
     private float rate = 0;
 
@@ -18,5 +18,7 @@ public class EnemyInstrument : MonoBehaviour
             i += Time.deltaTime * rate;
             transform.position = Vector3.Lerp(transform.position, player.transform.position, i);
         }
+
+        transform.LookAt(player.transform);
     }
 }
