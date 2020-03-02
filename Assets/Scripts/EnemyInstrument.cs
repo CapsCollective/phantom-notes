@@ -17,6 +17,8 @@ public class EnemyInstrument : MonoBehaviour
 
     private Instrument instrument;
 
+    private float seed;
+
     [System.Serializable]
     public struct InstrumentToObject
     {
@@ -31,6 +33,7 @@ public class EnemyInstrument : MonoBehaviour
     private void Start()
     {
         player = PlayerController.Instance;
+        seed = Random.Range(0, 100);
     }
 
 
@@ -51,13 +54,17 @@ public class EnemyInstrument : MonoBehaviour
 
     void Update()
     {
-        var velocity = new Vector3();
+        Vector3 newPos = new Vector3();
+        float wavyRange = 5f;
+
+
         rate = 1/time;
         if (i < 1)
         {
             i += Time.deltaTime * rate;
-            velocity = Vector3.Lerp(transform.position, player.transform.position, i);
-            transform.position = velocity;
+            Vector3 randomNoise = new Vector3(Mathf.Sin(Time.time + seed) * wavyRange, Mathf.Cos(Time.time + (seed*2)) * wavyRange, Mathf.Sin(Time.time + seed) * wavyRange);
+            newPos = Vector3.Lerp(transform.position, player.transform.position + randomNoise, i);
+            transform.position = newPos;
         }
 
         transform.LookAt(player.transform);
@@ -66,7 +73,7 @@ public class EnemyInstrument : MonoBehaviour
         {
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             Destroy(gameObject,0);
-            newObj.GetComponent<Rigidbody>().velocity = velocity*knockBack;
+            newObj.GetComponent<Rigidbody>().velocity = newPos * knockBack;
             newObj.GetComponent<PickupInstrument>().Setup(instrument, currentInstrumentObject);
         }
     }
