@@ -43,7 +43,10 @@ public class EnemyInstrument : MonoBehaviour
                 currentInstrumentObject = instrumentObject.meshInstrument;
 
 
-        Instantiate(currentInstrumentObject, transform);
+        GameObject newObj = Instantiate(currentInstrumentObject, transform);
+        Outline newOutline = newObj.AddComponent<Outline>();
+        newOutline.OutlineColor = Color.red;
+        newOutline.OutlineWidth = 20;
     }
 
     void Update()
