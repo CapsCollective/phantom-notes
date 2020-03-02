@@ -1,0 +1,130 @@
+//
+// Compute shader for the Tiled Palette effect
+//
+
+#pragma kernel Main
+
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+
+// Compute shader properties
+TEXTURE2D(_FontTexture);
+TEXTURE2D_X(_InputTexture);
+RW_TEXTURE2D_X(float4, _OutputTexture);
+
+CBUFFER_START(cb)
+    float4 _Palette[8];
+    uint _Downsampling;
+    float _Dithering, _Glitch, _Opacity, _LocalTime;
+CBUFFER_END
+
+// Compile time constants
+static const float bayer2x2[] = {-0.5, 0.16666666, 0.5, -0.16666666};
+
+// Thread group shared variables
+groupshared float2 dists[64];
+groupshared bool select1;
+
+// Apply a four color palette.
+float4 ApplyPalette(float3 rgb, uint idx)
+{
+    const float3 c1 = _Palette[idx + 0].rgb;
+    const float3 c2 = _Palette[idx + 1].rgb;
+    const float3 c3 = _Palette[idx + 2].rgb;
+    const float3 c4 = _Palette[idx + 3].rgb;
+
+    const float d1 = distance(c1, rgb);
+    const float d2 = distance(c2, rgb);
+    const float d3 = distance(c3, rgb);
+    const float d4 = distance(c4, rgb);
+
+    float4 rgb_d = float4(c1, d1);
+    rgb_d = rgb_d.a < d2 ? rgb_d : float4(c2, d2);
+    rgb_d = rgb_d.a < d3 ? rgb_d : float4(c3, d3);
+    rgb_d = rgb_d.a < d4 ? rgb_d : float4(c4, d4);
+
+    return rgb_d;
+}
+
+// Very low quality pseudo random number generator (uint)
+uint IRand(uint seed)
+{
+    return (seed + 0x811c9dc5u) ^ 0x01000193u;
+}
+
+// Low quality pseudo random number generator (float)
+float FRand(uint seed)
+{
+    return ConstructFloat((seed * 0x811c9dc5u) ^ 0x01000193u);
+}
+
+// Main kernel function
+[numthreads(8, 8, 1)]
+void Main(
+    uint3 gpID : SV_GroupID,
+    uint3 gtID : SV_GroupThreadID,
+    uint3 dtID : SV_DispatchThreadID
+)
+{
+    // Random number for per-block glitch effect
+    const uint seed_gp = gpID.y * 4096 + gpID.x;
+    const uint seed_t = lerp(1, 10, FRand(seed_gp)) * _LocalTime;
+    const uint seed = (seed_gp ^ IRand(seed_t)) * 2;
+    const uint glitch = IRand(seed) * (FRand(seed + 1) < _Glitch);
+
+    // Input texture sample with glitch displacement
+    const uint2 disp = uint2(glitch & 0xffffu, (glitch >> 16) & 0xffffu) * 8;
+    const uint2 tc_src = (dtID.xy + disp) % ((uint2)_ScreenParams.xy / _Downsampling);
+    const float4 src = LOAD_TEXTURE2D_X(_InputTexture, tc_src * _Downsampling);
+
+    // Character pattern sample
+    const uint2 tc_font = (dtID.xy & 7) + (uint2(seed >> 3, seed) & 7) * 8;
+    const float4 font = LOAD_TEXTURE2D(_FontTexture, tc_font).a;
+
+    // Input color
+    float4 col = (glitch & 0xa000u) == 0xa000u ? font : src;
+
+    // Linear -> sRGB
+    col.rgb = LinearToSRGB(col.rgb);
+
+    // Dithering (2x2 bayer)
+    const float dither = bayer2x2[(gtID.y & 1) * 2 + (gtID.x & 1)];
+    col.rgb += dither * _Dithering;
+
+    // Apply palette 1 and 2.
+    const float4 c1 = ApplyPalette(col.rgb, 0);
+    const float4 c2 = ApplyPalette(col.rgb, 4);
+
+    // Put the distance values onto a shared array.
+    dists[gtID.y * 8 + gtID.x] = float2(c1.a, c2.a);
+
+    GroupMemoryBarrierWithGroupSync(); 
+
+    // Thread #0: Accumulate and compare the distance values.
+    if (gtID.x == 0 && gtID.y == 0)
+    {
+        float2 acc = 0;
+        for (uint i = 0; i < 64; i++) acc += dists[i];
+        select1 = acc.x < acc.y;
+    }
+
+    GroupMemoryBarrierWithGroupSync(); 
+
+    // Palette selection and opacity
+    const bool flip = glitch & 0x1000u;
+    col.rgb = lerp(col.rgb, (select1 ^ flip) ? c1.rgb : c2.rgb, _Opacity);
+
+    // sRGB -> Linear
+    col.rgb = SRGBToLinear(col.rgb);
+
+    // Output
+    for (uint dy = 0; dy < _Downsampling; dy++)
+    {
+        for (uint dx = 0; dx < _Downsampling; dx++)
+        {
+            const uint2 dest = dtID.xy * _Downsampling + uint2(dx, dy);
+            _OutputTexture[COORD_TEXTURE2D_X(dest)] = col;
+        }
+    }
+}
