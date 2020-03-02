@@ -21,6 +21,8 @@ public class EnemyInstrument : MonoBehaviour
 
     public float minYFloor;
 
+    public Rigidbody rb;
+
     [System.Serializable]
     public struct InstrumentToObject
     {
@@ -64,11 +66,15 @@ public class EnemyInstrument : MonoBehaviour
         if (i < 1)
         {
             i += Time.deltaTime * rate;
-            Vector3 randomNoise = new Vector3(Mathf.Sin((Time.time* wavySpeed) + seed) * wavyRange, Mathf.Cos((Time.time* wavySpeed) + (seed*2)) * wavyRange, Mathf.Sin((Time.time* wavySpeed) + seed) * wavyRange);
-            newPos = Vector3.Lerp(transform.position, player.transform.position + randomNoise, i);
-            newPos.y = Mathf.Clamp(newPos.y, minYFloor, float.MaxValue);
-            transform.position = newPos;
+            //newPos = Vector3.Lerp(transform.position, player.transform.position + randomNoise, i);
+            //newPos.y = Mathf.Clamp(newPos.y, minYFloor, float.MaxValue);
+
+            //transform.position = newPos;
         }
+
+        Vector3 randomNoise = new Vector3(Mathf.Sin((Time.time* wavySpeed) + seed) * wavyRange, Mathf.Cos((Time.time* wavySpeed) + (seed*2)) * wavyRange, Mathf.Sin((Time.time* wavySpeed) + seed) * wavyRange);
+        rb.AddForce(player.transform.position - transform.position);
+        rb.AddForce(randomNoise);
 
         transform.LookAt(player.transform);
         
