@@ -109,11 +109,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591abae3fcb9a5847843dc0382c703f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charController: {fileID: 0}
   camSpeedH: 5
   camSpeedV: 5
   acceleration: 15
   maxMoveSpeed: 22
+  jumpForce: 3
+  jumpClamp: 3
 --- !u!54 &4876603913957649075
 Rigidbody:
   m_ObjectHideFlags: 0
