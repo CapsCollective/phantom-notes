@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackLength: 38.4
+  barsPerTrack: 4
   soundTracks:
   - track: {fileID: 0}
     trackLength: 9.6
