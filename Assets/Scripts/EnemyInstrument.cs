@@ -11,7 +11,7 @@ public class EnemyInstrument : MonoBehaviour
     public float knockBack;
     
     private PlayerController player;
-    private float time = 500;
+    private float time = 1000;
     private float i = 0;
     private float rate = 0;
 
