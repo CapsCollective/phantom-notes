@@ -92,7 +92,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2591707537060502531
 MonoBehaviour:
@@ -109,6 +109,7 @@ MonoBehaviour:
   pickupPrefab: {fileID: 4168288642035065837, guid: 8698809a0ac4bf5478ba753455409f3b,
     type: 3}
   knockBack: 1.2
+  minYFloor: -0.5
   instrumentObjects:
   - instrumentType: 0
     meshInstrument: {fileID: 1810442422485001665, guid: fafe1f0807db7794289e9705ccf45144,

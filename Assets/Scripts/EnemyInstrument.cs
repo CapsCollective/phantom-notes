@@ -19,6 +19,8 @@ public class EnemyInstrument : MonoBehaviour
 
     private float seed;
 
+    public float minYFloor;
+
     [System.Serializable]
     public struct InstrumentToObject
     {
@@ -56,14 +58,15 @@ public class EnemyInstrument : MonoBehaviour
     {
         Vector3 newPos = new Vector3();
         float wavyRange = 5f;
-
+        float wavySpeed = 3;
 
         rate = 1/time;
         if (i < 1)
         {
             i += Time.deltaTime * rate;
-            Vector3 randomNoise = new Vector3(Mathf.Sin(Time.time + seed) * wavyRange, Mathf.Cos(Time.time + (seed*2)) * wavyRange, Mathf.Sin(Time.time + seed) * wavyRange);
+            Vector3 randomNoise = new Vector3(Mathf.Sin((Time.time* wavySpeed) + seed) * wavyRange, Mathf.Cos((Time.time* wavySpeed) + (seed*2)) * wavyRange, Mathf.Sin((Time.time* wavySpeed) + seed) * wavyRange);
             newPos = Vector3.Lerp(transform.position, player.transform.position + randomNoise, i);
+            newPos.y = Mathf.Clamp(newPos.y, minYFloor, float.MaxValue);
             transform.position = newPos;
         }
 
