@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_phantom-notes.1455910604.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="EnemyInstrument.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="CharController0.cs" t="Include" />
+        </e>
+        <e p="VacuumShaders" t="Include">
+          <e p="Subsurface Scattering Shader" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="all" t="Include">
+                <e p="Bumped Specular.shader" t="Include" />
+                <e p="Bumped.shader" t="Include" />
+                <e p="Cutout Bumped Specular.shader" t="Include" />
+                <e p="Cutout Bumped.shader" t="Include" />
+                <e p="Cutout Reflective Bumped Specular.shader" t="Include" />
+                <e p="Cutout Reflective Bumped.shader" t="Include" />
+                <e p="Cutout Reflective Specular.shader" t="Include" />
+                <e p="Cutout Reflective.shader" t="Include" />
+                <e p="Cutout Specular.shader" t="Include" />
+                <e p="Cutout.shader" t="Include" />
+                <e p="Diffuse.shader" t="Include" />
+                <e p="DX11_Tessellation_DistanceBased.shader" t="Include" />
+                <e p="DX11_Tessellation_LengthBased.shader" t="Include" />
+                <e p="Reflective Bumped Specular.shader" t="Include" />
+                <e p="Reflective Bumped.shader" t="Include" />
+                <e p="Reflective Specular.shader" t="Include" />
+                <e p="Reflective.shader" t="Include" />
+                <e p="Specular.shader" t="Include" />
+                <e p="Transparent Bumped Specular.shader" t="Include" />
+                <e p="Transparent Bumped.shader" t="Include" />
+                <e p="Transparent Reflective Bumped Specular.shader" t="Include" />
+                <e p="Transparent Reflective Bumped.shader" t="Include" />
+                <e p="Transparent Reflective Specular.shader" t="Include" />
+                <e p="Transparent Reflective.shader" t="Include" />
+                <e p="Transparent Specular.shader" t="Include" />
+                <e p="Transparent.shader" t="Include" />
+              </e>
+              <e p="ambient" t="Include">
+                <e p="Bumped Specular.shader" t="Include" />
+                <e p="Bumped.shader" t="Include" />
+                <e p="Cutout Bumped Specular.shader" t="Include" />
+                <e p="Cutout Bumped.shader" t="Include" />
+                <e p="Cutout Reflective Bumped Specular.shader" t="Include" />
+                <e p="Cutout Reflective Bumped.shader" t="Include" />
+                <e p="Cutout Reflective Specular.shader" t="Include" />
+                <e p="Cutout Reflective.shader" t="Include" />
+                <e p="Cutout Specular.shader" t="Include" />
+                <e p="Cutout.shader" t="Include" />
+                <e p="Diffuse.shader" t="Include" />
+                <e p="DX11_Tessellation_DistanceBased.shader" t="Include" />
+                <e p="DX11_Tessellation_LengthBased.shader" t="Include" />
+                <e p="Reflective Bumped Specular.shader" t="Include" />
+                <e p="Reflective Bumped.shader" t="Include" />
+                <e p="Reflective Specular.shader" t="Include" />
+                <e p="Reflective.shader" t="Include" />
+                <e p="Specular.shader" t="Include" />
+                <e p="Transparent Bumped Specular.shader" t="Include" />
+                <e p="Transparent Bumped.shader" t="Include" />
+                <e p="Transparent Reflective Bumped Specular.shader" t="Include" />
+                <e p="Transparent Reflective Bumped.shader" t="Include" />
+                <e p="Transparent Reflective Specular.shader" t="Include" />
+                <e p="Transparent Reflective.shader" t="Include" />
+                <e p="Transparent Specular.shader" t="Include" />
+                <e p="Transparent.shader" t="Include" />
+                <e p="VertexLit (One Pass)_1.shader" t="Include" />
+                <e p="VertexLit (One Pass)_2.shader" t="Include" />
+                <e p="VertexLit (One Pass)_3.shader" t="Include" />
+                <e p="VertexLit (One Pass)_4.shader" t="Include" />
+              </e>
+              <e p="Bumped Specular.shader" t="Include" />
+              <e p="Bumped.shader" t="Include" />
+              <e p="Cutout Bumped Specular.shader" t="Include" />
+              <e p="Cutout Bumped.shader" t="Include" />
+              <e p="Cutout Reflective Bumped Specular.shader" t="Include" />
+              <e p="Cutout Reflective Bumped.shader" t="Include" />
+              <e p="Cutout Reflective Specular.shader" t="Include" />
+              <e p="Cutout Reflective.shader" t="Include" />
+              <e p="Cutout Specular.shader" t="Include" />
+              <e p="Cutout.shader" t="Include" />
+              <e p="Diffuse.shader" t="Include" />
+              <e p="DX11_Tessellation_DistanceBased.shader" t="Include" />
+              <e p="DX11_Tessellation_LengthBased.shader" t="Include" />
+              <e p="dynlightmap" t="Include">
+                <e p="Bumped Specular.shader" t="Include" />
+                <e p="Bumped.shader" t="Include" />
+                <e p="Cutout Bumped Specular.shader" t="Include" />
+                <e p="Cutout Bumped.shader" t="Include" />
+                <e p="Cutout Reflective Bumped Specular.shader" t="Include" />
+                <e p="Cutout Reflective Bumped.shader" t="Include" />
+                <e p="Cutout Reflective Specular.shader" t="Include" />
+                <e p="Cutout Reflective.shader" t="Include" />
+                <e p="Cutout Specular.shader" t="Include" />
+                <e p="Cutout.shader" t="Include" />
+                <e p="Diffuse.shader" t="Include" />
+                <e p="DX11_Tessellation_DistanceBased.shader" t="Include" />
+                <e p="DX11_Tessellation_LengthBased.shader" t="Include" />
+                <e p="Reflective Bumped Specular.shader" t="Include" />
+                <e p="Reflective Bumped.shader" t="Include" />
+                <e p="Reflective Specular.shader" t="Include" />
+                <e p="Reflective.shader" t="Include" />
+                <e p="Specular.shader" t="Include" />
+                <e p="Transparent Bumped Specular.shader" t="Include" />
+                <e p="Transparent Bumped.shader" t="Include" />
+                <e p="Transparent Reflective Bumped Specular.shader" t="Include" />
+                <e p="Transparent Reflective Bumped.shader" t="Include" />
+                <e p="Transparent Reflective Specular.shader" t="Include" />
+                <e p="Transparent Reflective.shader" t="Include" />
+                <e p="Transparent Specular.shader" t="Include" />
+                <e p="Transparent.shader" t="Include" />
+              </e>
+              <e p="Reflective Bumped Specular.shader" t="Include" />
+              <e p="Reflective Bumped.shader" t="Include" />
+              <e p="Reflective Specular.shader" t="Include" />
+              <e p="Reflective.shader" t="Include" />
+              <e p="Specular.shader" t="Include" />
+              <e p="SSS.cginc" t="Include" />
+              <e p="Transparent Bumped Specular.shader" t="Include" />
+              <e p="Transparent Bumped.shader" t="Include" />
+              <e p="Transparent Reflective Bumped Specular.shader" t="Include" />
+              <e p="Transparent Reflective Bumped.shader" t="Include" />
+              <e p="Transparent Reflective Specular.shader" t="Include" />
+              <e p="Transparent Reflective.shader" t="Include" />
+              <e p="Transparent Specular.shader" t="Include" />
+              <e p="Transparent.shader" t="Include" />
+              <e p="VertexLit (One Pass)_1.shader" t="Include" />
+              <e p="VertexLit (One Pass)_2.shader" t="Include" />
+              <e p="VertexLit (One Pass)_3.shader" t="Include" />
+              <e p="VertexLit (One Pass)_4.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="phantom-notes.sln" t="IncludeFlat" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
