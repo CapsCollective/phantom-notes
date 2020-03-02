@@ -81,7 +81,8 @@ public class EnemyInstrument : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.K))
         {
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
-            Destroy(gameObject,0);
+            newObj.transform.SetParent(null);
+            Destroy(gameObject);
             newObj.GetComponent<Rigidbody>().velocity = newPos * knockBack;
             newObj.GetComponent<PickupInstrument>().Setup(instrument, currentInstrumentObject);
         }

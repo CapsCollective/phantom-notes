@@ -140,3 +140,4 @@ MonoBehaviour:
   pickupDistance: 1.5
   hooverDistance: 4
   hooverSpeed: 20
+  secondsToDisappear: 5
