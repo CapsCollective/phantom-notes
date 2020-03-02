@@ -494,15 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa96205c40a7664ea342fc576f3bcd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flute: {fileID: 0}
-  guitar: {fileID: 0}
-  tuba: {fileID: 0}
-  symbal: {fileID: 0}
-  weaponArray: []
-  rotationPoint: {fileID: 0}
-  weaponSwitchTime: 0
-  activatePoint: {fileID: 0}
-  deactivatePoint: {fileID: 0}
+  weaponChangeSpeed: 25
 --- !u!1 &8318838773055495153
 GameObject:
   m_ObjectHideFlags: 0
