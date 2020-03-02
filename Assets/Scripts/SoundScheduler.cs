@@ -16,8 +16,12 @@ public struct SoundTrack
 public class SoundScheduler : MonoBehaviour
 {
 
+    public float trackLength, barsPerTrack = 4;
     public List<SoundTrack> soundTracks;
 
+    private float timeCounter;
+
+    private float visualFlashCounter = 0;
 
     void Start()
     {
@@ -26,7 +30,8 @@ public class SoundScheduler : MonoBehaviour
 
     private IEnumerator PlayTrack (int _trackID)
     {
-        _trackID = _trackID % soundTracks.Count;
+        if (_trackID >= soundTracks.Count)
+            yield break;
 
         Debug.Log("playing track: " + soundTracks[_trackID].track);
 
@@ -34,6 +39,25 @@ public class SoundScheduler : MonoBehaviour
 
 
         StartCoroutine(PlayTrack(_trackID+1));
+    }
+
+    private void Update()
+    {
+        timeCounter += Time.deltaTime;
+
+        if (timeCounter > trackLength)
+        {
+            StartCoroutine(PlayTrack(0));
+            timeCounter = 0;
+        }
+
+
+        visualFlashCounter += Time.deltaTime;
+        if (visualFlashCounter > (trackLength / soundTracks.Count) / barsPerTrack)
+        {
+            visualFlashCounter = 0;
+            Debug.Log("Do visual flashes!!");
+        }
     }
 
 }

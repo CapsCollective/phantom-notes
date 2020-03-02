@@ -278,13 +278,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eea931acbf5b9047b5513a8c91f99f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trackLength: 38.4
   soundTracks:
-  - track: part1
-    trackLength: 2
-  - track: part2
-    trackLength: 2
-  - track: part3
-    trackLength: 2
+  - track: {fileID: 0}
+    trackLength: 9.6
+  - track: {fileID: 0}
+    trackLength: 9.6
+  - track: {fileID: 0}
+    trackLength: 9.6
+  - track: {fileID: 0}
+    trackLength: 9.6
 --- !u!1001 &8467373167815775683
 PrefabInstance:
   m_ObjectHideFlags: 0
