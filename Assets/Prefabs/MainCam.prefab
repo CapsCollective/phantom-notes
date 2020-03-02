@@ -457,6 +457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4182531274184182508}
+  - component: {fileID: 7903383184052045681}
   m_Layer: 0
   m_Name: weapon rotate around
   m_TagString: Untagged
@@ -471,7 +472,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8281127315806840604}
-  m_LocalRotation: {x: 0, y: 0, z: 0.86602545, w: 0.49999994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.694, z: 0.533}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -481,6 +482,27 @@ Transform:
   m_Father: {fileID: 7449422877546120420}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 120}
+--- !u!114 &7903383184052045681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281127315806840604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa96205c40a7664ea342fc576f3bcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flute: {fileID: 0}
+  guitar: {fileID: 0}
+  tuba: {fileID: 0}
+  symbal: {fileID: 0}
+  weaponArray: []
+  rotationPoint: {fileID: 0}
+  weaponSwitchTime: 0
+  activatePoint: {fileID: 0}
+  deactivatePoint: {fileID: 0}
 --- !u!1 &8318838773055495153
 GameObject:
   m_ObjectHideFlags: 0
