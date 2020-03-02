@@ -250,7 +250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b10d0950633c7449891ea1d42858ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charController: {fileID: 0}
+  speedH: 0
+  speedV: 0
+  acceleration: 0
+  maxMoveSpeed: 0
 --- !u!143 &212364262
 CharacterController:
   m_ObjectHideFlags: 0
@@ -737,12 +740,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 212364259}
-    - target: {fileID: 2591707537060502531, guid: 630d5e458038c4b4abe233c0dbba3021,
-        type: 3}
-      propertyPath: pickupPrefab
-      value: 
-      objectReference: {fileID: 4168288642035065837, guid: f02f8cf3caf134298940fcdbbc796300,
-        type: 3}
     - target: {fileID: 2591707537060502532, guid: 630d5e458038c4b4abe233c0dbba3021,
         type: 3}
       propertyPath: m_Name
