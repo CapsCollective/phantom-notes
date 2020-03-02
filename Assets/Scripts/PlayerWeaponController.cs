@@ -33,8 +33,6 @@ public class PlayerWeaponController : MonoBehaviour
         guitar.SetActive(false);
         tuba.SetActive(false);
         symbal.SetActive(false);
-
-
     }
 
     // Update is called once per frame
@@ -49,6 +47,12 @@ public class PlayerWeaponController : MonoBehaviour
         {
             flute.SetActive(true);
             float deactivateTime = Time.time + weaponSwitchTime;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            var angles = transform.localEulerAngles;
+            transform.localEulerAngles = new Vector3(angles.x, angles.y,  angles.z + 360 / 3);
         }
     }
 }
