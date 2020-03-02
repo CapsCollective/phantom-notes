@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class EnemyInstrument : MonoBehaviour
 {
-    public GameObject player;
+    private PlayerController player;
     private float time = 500;
     private float i = 0;
     private float rate = 0;
 
     // Update is called once per frame
+
+
+
+    private void Start()
+    {
+        player = PlayerController.Instance;
+    }
+
     void Update()
     {
         rate = 1/time;
