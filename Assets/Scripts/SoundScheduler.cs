@@ -27,7 +27,8 @@ public class SoundScheduler : MonoBehaviour
 
     public static SoundScheduler Instance;
 
-    public bool IsFlash;
+    private float criticalMax;
+    private float criticalCounter;
 
     private void Awake()
     {
@@ -64,20 +65,25 @@ public class SoundScheduler : MonoBehaviour
         }
 
 
-        visualFlashCounter += Time.deltaTime;
-        if (visualFlashCounter > (trackLength / soundTracks.Count) / barsPerTrack)
+        criticalCounter += Time.deltaTime;
+        criticalMax = (trackLength / soundTracks.Count) / barsPerTrack;
+        if (criticalCounter > criticalMax)
         {
-            visualFlashCounter = 0;
-            StartCoroutine(Flash());
+            criticalCounter = 0;
         }
+
     }
 
-    private IEnumerator Flash ()
+    public float Critical //returns a value 0-1 (where 1 is a stronger critical)
     {
-        IsFlash = true;
-        yield return new WaitForSeconds(0.3f);
-        IsFlash = false;
+        get
+        {
+            return 1 - (criticalCounter / criticalMax);
+
+        }
+
 
     }
+
 
 }
