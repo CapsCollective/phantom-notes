@@ -7,6 +7,7 @@ public enum Instrument
 {
     Flute,
     Guitar,
+    Tuba,
 }
 
 public class DataStructures : MonoBehaviour

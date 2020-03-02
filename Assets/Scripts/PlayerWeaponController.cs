@@ -4,73 +4,49 @@ using UnityEngine;
 
 public class PlayerWeaponController : MonoBehaviour
 {
-//    public GameObject flute;
-//    public GameObject guitar;
-//    public GameObject tuba;
-//    public GameObject symbal;
-//
-//    public GameObject[] weaponArray;
-//    private Transform[] transformArray;
-//    private int[] ammoArray;
-//
-//    public GameObject rotationPoint;
-//    public float weaponSwitchTime;
-//    public GameObject activatePoint;
-//    public GameObject deactivatePoint;
+    public GameObject[] weaponArray;
     public int weaponChangeSpeed;
 
-    private Instrument currentWeapon;
-    private Instrument nextWeapon;
+    private Instrument currentWeapon = Instrument.Flute;
     private bool changingWeapon = false;
     private float targetRot = 0;
-
-    void Start()
-    {
-//        currentWeapon = Instrument.Flute;
-//
-//        weaponArray = new GameObject[] { flute, guitar, tuba, symbal };
-//        transformArray = new Transform[] { flute.transform, guitar.transform, tuba.transform, symbal.transform };
-//        ammoArray = new int[] { 3, 1, 1, 1 };
-//        flute.SetActive(true);
-//        guitar.SetActive(false);
-//        tuba.SetActive(false);
-//        symbal.SetActive(false);
-    }
 
     // Update is called once per frame
     void Update()
     {
-//        if (changingWeapon)
-//        {
-//            weaponArray[(int)currentWeapon].transform.RotateAround(rotationPoint.transform.position, transform.forward, weaponSwitchTime * Time.deltaTime);
-//        }
-//        //float deactivateTime;
-//        if (Input.GetKeyDown(KeyCode.Alpha1) && currentWeapon != Instrument.Flute)
-//        {
-//            flute.SetActive(true);
-//            float deactivateTime = Time.time + weaponSwitchTime;
-//        }
-        
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            
             changingWeapon = true;
             targetRot += 120 % 360;
+            currentWeapon = GetWeapon(1);
+            weaponArray[(int) currentWeapon].SetActive(true);
         }
 
         if (changingWeapon)
         {
-            var targetQuat = Quaternion.Euler(0, 0, targetRot);
-            var rotation = transform.rotation;
-            if (rotation.z < targetRot - 1)
+            Vector3 rot = transform.rotation.eulerAngles;
+            rot = new Vector3(rot.x,rot.y,targetRot);
+            var targetRotation = Quaternion.Euler(rot);
+            
+            var normalisedZRoation = transform.localEulerAngles.z;
+            if (normalisedZRoation < 0)
+                normalisedZRoation += 360.0f;
+            if (normalisedZRoation < targetRot - 10)
             {
-                transform.rotation = Quaternion.Slerp(rotation, 
-                    targetQuat, 
-                    Time.deltaTime * weaponChangeSpeed);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, 
+                    targetRotation, Time.deltaTime * weaponChangeSpeed);
             }
             else
             {
+                weaponArray[(int) GetWeapon(-1)].SetActive(false);
                 changingWeapon = false;
             }
         }
+    }
+
+    Instrument GetWeapon(int offset)
+    {
+        return (Instrument) (((int) currentWeapon + offset) % 3);
     }
 }
