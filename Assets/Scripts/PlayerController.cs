@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
         //bodyObj = transform.GetChild(0).gameObject;
         cam = Camera.main;
         camObj = transform.GetChild(0).gameObject;
-        print(cam);
         rb = GetComponent<Rigidbody>();
 
         movementSideVector = new Vector3(acceleration, 0, 0);
