@@ -15,11 +15,35 @@ public class EnemyInstrument : MonoBehaviour
     private float i = 0;
     private float rate = 0;
 
-    public Instrument instrument;
+    private Instrument instrument;
+
+    [System.Serializable]
+    public struct InstrumentToObject
+    {
+        public Instrument instrumentType;
+        public GameObject meshInstrument;
+    }
+
+    
+    public List<InstrumentToObject> instrumentObjects;
+    private GameObject currentInstrumentObject;
 
     private void Start()
     {
         player = PlayerController.Instance;
+    }
+
+
+    public void Setup (Instrument _instrument)
+    {
+        instrument = _instrument;
+
+        foreach (InstrumentToObject instrumentObject in instrumentObjects)
+            if (instrumentObject.instrumentType == Instrument.FLUTE)
+                currentInstrumentObject = instrumentObject.meshInstrument;
+
+
+        Instantiate(currentInstrumentObject, transform);
     }
 
     void Update()
@@ -40,7 +64,7 @@ public class EnemyInstrument : MonoBehaviour
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             Destroy(gameObject,0);
             newObj.GetComponent<Rigidbody>().velocity = velocity*knockBack;
-            newObj.GetComponent<PickupInstrument>().Setup(instrument);
+            newObj.GetComponent<PickupInstrument>().Setup(instrument, currentInstrumentObject);
         }
     }
 }

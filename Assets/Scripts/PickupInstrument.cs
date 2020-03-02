@@ -18,11 +18,11 @@ public class PickupInstrument : MonoBehaviour
         player = PlayerController.Instance;
     }
 
-    public void Setup (Instrument _instrument)
+    public void Setup (Instrument _instrument, GameObject _meshInstrument)
     {
         thisInstrument = _instrument;
 
-        // change mesh to this instrument
+        Instantiate(_meshInstrument, transform);
     }
     
     void Update()

@@ -13,6 +13,7 @@ public class InstrumentSpawner : MonoBehaviour
 
     void SpawnInstrument()
     {
-        Instantiate(enemyPrefab, transform.position, new Quaternion());
+        GameObject newEnemy = Instantiate(enemyPrefab, transform.position, new Quaternion());
+        newEnemy.GetComponent<EnemyInstrument>().Setup(Instrument.FLUTE); /// <----- CHANGE TO SELECT INSTRUMENT
     }
 }
