@@ -36,20 +36,46 @@
             </e>
           </e>
         </e>
+        <e p="QuickOutline" t="Include">
+          <e p="Readme.txt" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="OutlineFill.shader" t="Include" />
+              <e p="OutlineMask.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Outline.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="BPM.cs" t="Include" />
-          <e p="CharController0.cs" t="Include" />
+          <e p="DataStructures.cs" t="Include" />
           <e p="EnemyInstrument.cs" t="Include" />
           <e p="Flicker.cs" t="Include" />
+          <e p="InstrumentEnum.cs" t="Include" />
           <e p="InstrumentSpawner.cs" t="Include" />
           <e p="PickupInstrument.cs" t="Include" />
           <e p="PlayerCollision.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealthScore.cs" t="Include" />
           <e p="PlayerScoreController.cs" t="Include" />
+          <e p="PlayerWeaponController.cs" t="Include" />
+          <e p="SoundScheduler.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="AlphaSelfIllum.shader" t="Include" />
+        </e>
+        <e p="SineVFX" t="Include">
+          <e p="TranslucentCrystals" t="Include">
+            <e p="Readme.txt" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="Crystal.shader" t="Include" />
+                <e p="SkyboxProceduralDesaturated.shader" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="VacuumShaders" t="Include">
           <e p="Subsurface Scattering Shader" t="Include">
