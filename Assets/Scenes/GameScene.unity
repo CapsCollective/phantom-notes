@@ -220,11 +220,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: weaponChangeSpeed
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6725314468772322297, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_IsActive
