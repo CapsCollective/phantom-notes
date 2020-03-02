@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController Instance;
 
-    public CharacterController charController;
-
     public float camSpeedH, camSpeedV;
     public float acceleration;
     public float maxMoveSpeed;
@@ -46,7 +44,7 @@ public class PlayerController : MonoBehaviour
         pitch += -1f * camSpeedV * Input.GetAxis("Mouse Y");
         pitch = Mathf.Clamp(pitch, -90f, 90f);
 
-        camObj.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        camObj.transform.localEulerAngles = new Vector3(pitch, 0.0f, 0.0f);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, yaw, transform.eulerAngles.z);
 
 
@@ -73,5 +71,11 @@ public class PlayerController : MonoBehaviour
         rb.velocity = Vector3.ClampMagnitude(flatVelo, maxMoveSpeed);
         rb.velocity = new Vector3(rb.velocity.x, yVelo, rb.velocity.z);
     }
+
+
+   /* private void FixedUpdate()
+    {
+        
+    }*/
 
 }
