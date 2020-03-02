@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 1092591259}
   - component: {fileID: 1092591258}
   - component: {fileID: 1092591260}
+  - component: {fileID: 1092591261}
   m_Layer: 0
   m_Name: '[Master]'
   m_TagString: Untagged
@@ -317,14 +318,28 @@ MonoBehaviour:
   trackLength: 38.4
   barsPerTrack: 4
   soundTracks:
-  - track: {fileID: 0}
+  - track: {fileID: 8300000, guid: e6997aee0417e374da42aa08abdd331d, type: 3}
     trackLength: 9.6
-  - track: {fileID: 0}
+  - track: {fileID: 8300000, guid: c06b04d72a62340498aff3df15c7c163, type: 3}
     trackLength: 9.6
-  - track: {fileID: 0}
+  - track: {fileID: 8300000, guid: 6231cfcfabc6c51438cc5383403836c0, type: 3}
     trackLength: 9.6
-  - track: {fileID: 0}
+  - track: {fileID: 8300000, guid: 34f9eb4783da33f4ebfb579425cfe089, type: 3}
     trackLength: 9.6
+--- !u!114 &1092591261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092591257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8723ff610e846041a31459647fa507c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioObject: {fileID: 3997304278789505436, guid: 92038d3284eb86b468f88504240c9073,
+    type: 3}
 --- !u!1 &1792352908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1221633563520775500, guid: b816e252378bc4c27aa50746d4459acd,
