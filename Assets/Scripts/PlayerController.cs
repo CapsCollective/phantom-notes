@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float camSpeedH, camSpeedV;
     public float acceleration;
     public float maxMoveSpeed;
+    public float jumpForce;
+    public float jumpClamp = 5;
 
     private float yaw, pitch;
 
@@ -19,6 +21,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Vector3 movementForwardVector;
     private Vector3 movementSideVector;
+
+    private bool grounded = true;
 
     private void Awake()
     {
@@ -66,15 +70,24 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector3 flatVelo = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        float yVelo = rb.velocity.y;
+        float yVelo = Mathf.Clamp(rb.velocity.y, float.MinValue, jumpClamp);
         rb.velocity = Vector3.ClampMagnitude(flatVelo, maxMoveSpeed);
         rb.velocity = new Vector3(rb.velocity.x, yVelo, rb.velocity.z);
+
+        JumpCheck();
     }
 
 
-   /* private void FixedUpdate()
+    private void JumpCheck()
     {
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, -Vector3.up);
+
+        grounded = Physics.Raycast(ray, out hit, 1.5f);
+
+        if (Input.GetKeyDown(KeyCode.Space) && grounded && rb.velocity.y >= -0.1f)
+            rb.velocity += new Vector3(0, jumpForce, 0);
         
-    }*/
+    }
 
 }

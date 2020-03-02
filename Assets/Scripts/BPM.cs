@@ -9,14 +9,33 @@ public class BPM : MonoBehaviour
 
     public int bpm;
 
+    public delegate void OnBeatDelegate();
+    public static OnBeatDelegate beatDelegate;
 
-    public int beatCounter = 0;
-    private bool a = true;
+
+    private bool beatEnabled;
+    private int beatCounter;
 
     void Awake()
     {
         instance = this;
     }
+
+
+
+    private void Update()
+    {
+        bool currentlyEnabled = Enabled;
+        if (currentlyEnabled != beatEnabled)
+        {
+       //     beatDelegate();
+            beatCounter++;
+        }
+        beatEnabled = currentlyEnabled;
+    }
+
+
+
 
     public bool Enabled 
     {

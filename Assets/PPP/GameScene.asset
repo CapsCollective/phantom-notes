@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -111,10 +111,10 @@ MonoBehaviour:
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 0
-    value: 0
+    value: -59
   saturation:
     overrideState: 0
-    value: 0
+    value: -50.8
   brightness:
     overrideState: 0
     value: 0
@@ -1378,7 +1378,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: -68.8
+    value: -40
   intensityX:
     overrideState: 0
     value: 1
@@ -1393,7 +1393,7 @@ MonoBehaviour:
     value: 0
   scale:
     overrideState: 0
-    value: 1
+    value: 0.74
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,10 +1478,10 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 2.02
+    value: 29.68
   aperture:
     overrideState: 1
-    value: 4.2
+    value: 0.6
   focalLength:
     overrideState: 0
     value: 50
@@ -1510,7 +1510,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.156
+    value: 0.381
   fastMode:
     overrideState: 0
     value: 0

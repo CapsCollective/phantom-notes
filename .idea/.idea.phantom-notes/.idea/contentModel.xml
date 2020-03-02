@@ -41,6 +41,8 @@
           <e p="CharController0.cs" t="Include" />
           <e p="EnemyInstrument.cs" t="Include" />
           <e p="Flicker.cs" t="Include" />
+          <e p="InstrumentSpawner.cs" t="Include" />
+          <e p="PickupInstrument.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
