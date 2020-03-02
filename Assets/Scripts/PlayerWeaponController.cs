@@ -8,10 +8,18 @@ public class PlayerWeaponController : MonoBehaviour
     public Projectile projectile;
     public GameObject[] weaponArray;
     public int weaponChangeSpeed;
+    
+    public static PlayerWeaponController Instance;
 
+    private int[] weaponAmmo = new int[] {0, 0, 0, 0};
     private Instrument currentWeapon = Instrument.Flute;
     private bool changingWeapon = false;
     private float targetRot = 0;
+    
+    private void Awake()
+    {
+        Instance = this;
+    }
     
     void Update()
     {
@@ -63,5 +71,11 @@ public class PlayerWeaponController : MonoBehaviour
             rawValue += 3;
         }
         return (Instrument) (rawValue % 3);
+    }
+
+    public void AddAmmo(Instrument instrument)
+    {
+        ++weaponAmmo[(int) instrument];
+        print(weaponAmmo);
     }
 }

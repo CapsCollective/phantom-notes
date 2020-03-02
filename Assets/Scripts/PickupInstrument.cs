@@ -12,7 +12,7 @@ public class PickupInstrument : MonoBehaviour
     
     private PlayerController player;
 
-    private Instrument thisInstrument;
+    private Instrument instrument;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class PickupInstrument : MonoBehaviour
 
     public void Setup (Instrument _instrument, GameObject _meshInstrument)
     {
-        thisInstrument = _instrument;
+        instrument = _instrument;
 
         Instantiate(_meshInstrument, transform);
     }
@@ -32,8 +32,8 @@ public class PickupInstrument : MonoBehaviour
         var playerDistance = Vector3.Distance(player.transform.position, transform.position);
         if (playerDistance < pickupDistance)
         {
-            Destroy(gameObject,0);
-            print("picked up item: " + thisInstrument);
+            Destroy(gameObject, 0);
+            PlayerWeaponController.Instance.AddAmmo(instrument);
         }
         else if (playerDistance < hooverDistance)
         {

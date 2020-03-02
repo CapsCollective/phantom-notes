@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float jumpClamp = 5;
 
     private float yaw, pitch;
-
+    
     private GameObject bodyObj;
     private Camera cam;
     private GameObject camObj;
