@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerWeaponController : MonoBehaviour
 {
     public Camera cam;
+    public GameObject projectilePrefab;
     public Projectile projectile;
     public GameObject[] weaponArray;
     public int weaponChangeSpeed;
@@ -50,8 +51,15 @@ public class PlayerWeaponController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            var projectileInstance = Instantiate(projectile, transform.position, cam.transform.rotation);
-            projectileInstance.GetComponent<Rigidbody>().velocity = transform.InverseTransformPoint(Vector3.forward) * 0.1f;
+            //var projectileInstance = Instantiate(projectile, transform.position, cam.transform.rotation);
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
+            {
+                //raycast hits something
+                GameObject proj = Instantiate(projectilePrefab, cam.transform.position, new Quaternion());
+                proj.transform.LookAt(hit.point);
+            }
+            //projectileInstance.GetComponent<Rigidbody>().velocity = transform.InverseTransformPoint(Vector3.forward) * 0.1f;
         }
     }
 
