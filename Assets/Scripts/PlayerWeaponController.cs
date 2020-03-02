@@ -24,7 +24,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     void Start()
     {
-        currentWeapon = Instrument.FLUTE;
+        currentWeapon = Instrument.Flute;
 
         weaponArray = new GameObject[] { flute, guitar, tuba, symbal };
         transformArray = new Transform[] { flute.transform, guitar.transform, tuba.transform, symbal.transform };
@@ -45,7 +45,7 @@ public class PlayerWeaponController : MonoBehaviour
             weaponArray[(int)currentWeapon].transform.RotateAround(rotationPoint.transform.position, transform.forward, weaponSwitchTime * Time.deltaTime);
         }
         //float deactivateTime;
-        if (Input.GetKeyDown(KeyCode.Alpha1) && currentWeapon != Instrument.FLUTE)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && currentWeapon != Instrument.Flute)
         {
             flute.SetActive(true);
             float deactivateTime = Time.time + weaponSwitchTime;

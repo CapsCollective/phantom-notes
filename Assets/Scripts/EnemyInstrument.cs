@@ -46,7 +46,7 @@ public class EnemyInstrument : MonoBehaviour
         instrument = _instrument;
 
         foreach (InstrumentToObject instrumentObject in instrumentObjects)
-            if (instrumentObject.instrumentType == Instrument.FLUTE)
+            if (instrumentObject.instrumentType == Instrument.Flute)
                 currentInstrumentObject = instrumentObject.meshInstrument;
 
 

@@ -303,26 +303,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8467373167178442585, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
+    - target: {fileID: 1637190493152976731, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
         type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 4.5905e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 8467373167178442585, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 2591707537060502532, guid: 630d5e458038c4b4abe233c0dbba3021,
         type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 4.51e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 8467373167178442585, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 1.57e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 8467373167178442585, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: NaN
-      objectReference: {fileID: 0}
     - target: {fileID: 8467373167343687588, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
         type: 3}
       propertyPath: m_LocalPosition.x

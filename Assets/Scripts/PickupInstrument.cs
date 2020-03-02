@@ -8,6 +8,7 @@ public class PickupInstrument : MonoBehaviour
     public float pickupDistance;
     public float hooverDistance;
     public float hooverSpeed;
+    public int secondsToDisappear;
     
     private PlayerController player;
 
@@ -16,6 +17,7 @@ public class PickupInstrument : MonoBehaviour
     private void Start()
     {
         player = PlayerController.Instance;
+        Invoke(nameof(Disappear), secondsToDisappear);
     }
 
     public void Setup (Instrument _instrument, GameObject _meshInstrument)
@@ -40,5 +42,10 @@ public class PickupInstrument : MonoBehaviour
                 player.transform.position, 
                 hooverSpeed * Time.deltaTime);
         }
+    }
+
+    void Disappear()
+    {
+        Destroy(gameObject,0);
     }
 }

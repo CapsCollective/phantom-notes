@@ -5,13 +5,9 @@ using UnityEngine;
 
 public enum Instrument
 {
-    FLUTE,
-    TUBA,
-    GUITAR
+    Flute,
+    Guitar,
 }
-
-
-
 
 public class DataStructures : MonoBehaviour
 {

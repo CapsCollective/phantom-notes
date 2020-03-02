@@ -14,6 +14,6 @@ public class InstrumentSpawner : MonoBehaviour
     void SpawnInstrument()
     {
         GameObject newEnemy = Instantiate(enemyPrefab, transform.position, new Quaternion());
-        newEnemy.GetComponent<EnemyInstrument>().Setup(Instrument.FLUTE); /// <----- CHANGE TO SELECT INSTRUMENT
+        newEnemy.GetComponent<EnemyInstrument>().Setup(Instrument.Flute); /// <----- CHANGE TO SELECT INSTRUMENT
     }
 }
