@@ -19,7 +19,7 @@ RenderSettings:
   m_FogMode: 1
   m_FogDensity: 0.33
   m_LinearFogStart: 0
-  m_LinearFogEnd: 12.1
+  m_LinearFogEnd: 92.9
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 4876603913957649072, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.92
+      value: -51.7
       objectReference: {fileID: 0}
     - target: {fileID: 4876603913957649072, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
@@ -192,17 +192,17 @@ PrefabInstance:
     - target: {fileID: 4876603913957649072, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.20876108
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4876603913957649072, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.20876108
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4876603913957649072, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.20876108
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4876603913957649073, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
@@ -304,12 +304,12 @@ PrefabInstance:
     - target: {fileID: 8467373167343687588, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.9
       objectReference: {fileID: 0}
     - target: {fileID: 8467373167343687588, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.106
       objectReference: {fileID: 0}
     - target: {fileID: 8467373167343687588, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
         type: 3}
@@ -350,6 +350,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467373167343687588, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467373167343687588, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467373167343687588, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8467373167343687589, guid: 9abfaba8438cd7a46978b2ca69e33c6e,
         type: 3}

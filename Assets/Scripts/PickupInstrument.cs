@@ -11,9 +11,18 @@ public class PickupInstrument : MonoBehaviour
     
     private PlayerController player;
 
+    private Instrument thisInstrument;
+
     private void Start()
     {
         player = PlayerController.Instance;
+    }
+
+    public void Setup (Instrument _instrument)
+    {
+        thisInstrument = _instrument;
+
+        // change mesh to this instrument
     }
     
     void Update()
@@ -22,7 +31,7 @@ public class PickupInstrument : MonoBehaviour
         if (playerDistance < pickupDistance)
         {
             Destroy(gameObject,0);
-            print("picked up item");
+            print("picked up item: " + thisInstrument);
         }
         else if (playerDistance < hooverDistance)
         {

@@ -113,10 +113,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camSpeedH: 5
   camSpeedV: 5
-  acceleration: 7
-  maxMoveSpeed: 20
-  jumpForce: 3
-  jumpClamp: 3
+  acceleration: 35
+  maxMoveSpeed: 100
+  jumpForce: 15
+  jumpClamp: 15
 --- !u!54 &4876603913957649075
 Rigidbody:
   m_ObjectHideFlags: 0

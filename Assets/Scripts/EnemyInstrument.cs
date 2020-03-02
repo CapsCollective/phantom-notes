@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class EnemyInstrument : MonoBehaviour
 {
     public GameObject pickupPrefab;
@@ -11,6 +14,8 @@ public class EnemyInstrument : MonoBehaviour
     private float time = 500;
     private float i = 0;
     private float rate = 0;
+
+    public Instrument instrument;
 
     private void Start()
     {
@@ -35,6 +40,7 @@ public class EnemyInstrument : MonoBehaviour
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             Destroy(gameObject,0);
             newObj.GetComponent<Rigidbody>().velocity = velocity*knockBack;
+            newObj.GetComponent<PickupInstrument>().Setup(instrument);
         }
     }
 }
