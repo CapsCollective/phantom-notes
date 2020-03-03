@@ -10,13 +10,18 @@ public class EnemyInstrument : MonoBehaviour
     public GameObject pickupPrefab;
     public float knockBack;
     
+    
     private PlayerController player;
     private float time = 1000;
     private float i = 0;
     private float rate = 0;
 
     private Instrument instrument;
+    
+    private int[] healthValues = new int[] {10, 20, 30, 5};
 
+    private int health;
+    
     private float seed;
 
     public float minYFloor;
@@ -36,6 +41,7 @@ public class EnemyInstrument : MonoBehaviour
 
     private void Start()
     {
+        health = healthValues[(int) instrument];
         player = PlayerController.Instance;
         seed = Random.Range(0, 100);
     }
@@ -77,8 +83,8 @@ public class EnemyInstrument : MonoBehaviour
         rb.AddForce(randomNoise);
 
         transform.LookAt(player.transform);
-        
-        if (Input.GetKeyUp(KeyCode.K))
+
+        if (health <= 0)
         {
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             newObj.transform.SetParent(null);
@@ -86,5 +92,10 @@ public class EnemyInstrument : MonoBehaviour
             newObj.GetComponent<Rigidbody>().velocity = newPos * knockBack;
             newObj.GetComponent<PickupInstrument>().Setup(instrument, currentInstrumentObject);
         }
+    }
+
+    public void Damage(int value)
+    {
+        health -= value;
     }
 }

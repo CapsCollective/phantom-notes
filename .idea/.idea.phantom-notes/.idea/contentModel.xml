@@ -62,6 +62,7 @@
           <e p="PlayerScoreController.cs" t="Include" />
           <e p="PlayerWeaponController.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="SoundGuy.cs" t="Include" />
           <e p="SoundScheduler.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
