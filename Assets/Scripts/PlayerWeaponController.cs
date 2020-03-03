@@ -70,10 +70,13 @@ public class PlayerWeaponController : MonoBehaviour
         {
             if (weaponAmmo[(int)currentWeapon] > 0 || currentWeapon == Instrument.Flute)
             {
-                --weaponAmmo[(int)currentWeapon];
                 RaycastHit hit;
                 if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit) && Time.time >= nextFire)
                 {
+                    --weaponAmmo[(int)currentWeapon];
+                    var audioTracks = weaponArray[(int) currentWeapon].GetComponents<AudioSource>();
+                    audioTracks[audioProgression].Play();
+                    audioProgression = (audioProgression + 1) % audioTracks.Length;
                     GameObject proj = Instantiate(projectilePrefabs[(int) currentWeapon], projSpawnLocations[0].position, new Quaternion());
                     proj.transform.LookAt(hit.point);
                     proj.transform.Rotate(90f, 0f, 0f, Space.Self);

@@ -159,10 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageSounds:
-  - {fileID: 8300000, guid: 6686db7b577af415984981ef0d874579, type: 3}
-  - {fileID: 8300000, guid: 1cfebed78c7834e6e9b82e0d92903699, type: 3}
-  - {fileID: 8300000, guid: e11c456968ef949ab8009316abb30451, type: 3}
-  - {fileID: 8300000, guid: 72cabd1fed1974d478bd7ea2dc8586bf, type: 3}
+  - {fileID: 8300000, guid: 23d85247c2220d248ba21867de2a4196, type: 3}
+  - {fileID: 8300000, guid: 1d7720506baa606468d658e0df523757, type: 3}
+  - {fileID: 8300000, guid: 25050d014276a7e49adf51d8e697ef90, type: 3}
+  - {fileID: 8300000, guid: 256b71c62ba321548a371aa8d921628a, type: 3}
   profile: {fileID: 11400000, guid: 094cedca51e7fe444992ea56b663c9c7, type: 2}
   healthText: {fileID: 6725314470434081316}
   a: {fileID: 2232559281940846509}
