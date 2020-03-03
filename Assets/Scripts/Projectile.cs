@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
 
     private Rigidbody rb;
 
-    private int[] weaponDamages = {5, 3, 15};
+    private int[] weaponDamages = {1, 3, 15};
     private float cullTime;
 
 

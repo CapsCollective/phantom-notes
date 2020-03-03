@@ -82,6 +82,7 @@ public class PlayerWeaponController : MonoBehaviour
                     proj.transform.Rotate(90f, 0f, 0f, Space.Self);
 
                     proj.gameObject.GetComponent<TimeClick>().criticalClickValue = SoundScheduler.Instance.Critical;
+                    nextFire = Time.time + fireRates[(int) currentWeapon];
                 }
             }
             else
