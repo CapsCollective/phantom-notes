@@ -230,6 +230,11 @@ PrefabInstance:
       propertyPath: weaponArray.Array.data[3]
       value: 
       objectReference: {fileID: 1792352908}
+    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
+        type: 3}
+      propertyPath: projSpawnLocation
+      value: 
+      objectReference: {fileID: 1671318100}
     - target: {fileID: 6387277825286763412, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_IsActive
@@ -340,6 +345,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioObject: {fileID: 3997304278789505436, guid: 92038d3284eb86b468f88504240c9073,
     type: 3}
+--- !u!4 &1671318100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6554620323807746160, guid: b816e252378bc4c27aa50746d4459acd,
+    type: 3}
+  m_PrefabInstance: {fileID: 820984880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1792352908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1221633563520775500, guid: b816e252378bc4c27aa50746d4459acd,

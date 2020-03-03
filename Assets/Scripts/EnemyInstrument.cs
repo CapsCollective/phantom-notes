@@ -39,6 +39,8 @@ public class EnemyInstrument : MonoBehaviour
     public List<InstrumentToObject> instrumentObjects;
     private GameObject currentInstrumentObject;
 
+    public NumberRise numberRise;
+
     private void Start()
     {
         health = healthValues[(int) instrument];
@@ -97,5 +99,11 @@ public class EnemyInstrument : MonoBehaviour
     public void Damage(int value)
     {
         health -= value;
+
+        NumberRise newNumberRise = Instantiate(numberRise, transform);
+        newNumberRise.transform.SetParent(null);
+
+        newNumberRise.Setup(value);
+        newNumberRise.RunEffect(Random.Range(4,8));
     }
 }

@@ -120,6 +120,8 @@ MonoBehaviour:
     meshInstrument: {fileID: 0}
   - instrumentType: 2
     meshInstrument: {fileID: 0}
+  numberRise: {fileID: 4838056269089942852, guid: dbf4b681f8a360748b79e261d3f6a45f,
+    type: 3}
 --- !u!54 &5856405960626760477
 Rigidbody:
   m_ObjectHideFlags: 0
