@@ -13,15 +13,16 @@ public class SoundGuy : MonoBehaviour
     }
 
 
-    public void PlaySound (float pitch, AudioClip audioFile)
+    public void PlaySound (Vector3 _pos, float pitch, AudioClip audioFile)
     {
-        StartCoroutine(PlaySoundRun(pitch, audioFile));
+        StartCoroutine(PlaySoundRun(_pos, pitch, audioFile));
 
     }
 
-    private IEnumerator PlaySoundRun (float pitch, AudioClip audioFile)
+    private IEnumerator PlaySoundRun (Vector3 _pos, float pitch, AudioClip audioFile)
     {
         AudioSource newAudioObject = Instantiate(audioObject);
+        newAudioObject.transform.position = _pos;
        // AudioClip clip = (AudioClip)Resources.Load("Sounds/" + filename, typeof(AudioClip));
         newAudioObject.clip = audioFile;
         newAudioObject.pitch = pitch;
