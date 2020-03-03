@@ -141,7 +141,4 @@ MonoBehaviour:
   hooverDistance: 4
   hooverSpeed: 20
   secondsToDisappear: 5
-  pickupSounds:
-  - {fileID: 8300000, guid: d31a2d4848a36f04fbe19f8451bae517, type: 3}
-  - {fileID: 8300000, guid: dfbe49e66fb769c4dbb04e85aa320314, type: 3}
-  - {fileID: 8300000, guid: 1ea1268b9e9d45e40b288a603c59fc43, type: 3}
+  pickupSound: {fileID: 8300000, guid: 8d4b684a4577d2e468eaedf3876938b7, type: 3}

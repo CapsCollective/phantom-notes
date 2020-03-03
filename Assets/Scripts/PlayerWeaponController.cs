@@ -15,12 +15,12 @@ public class PlayerWeaponController : MonoBehaviour
     
     public static PlayerWeaponController Instance;
 
-    private int[] weaponAmmo = {5, 1, 1, 1};
+    private int[] weaponAmmo = {5, 5, 5};
     private Instrument currentWeapon = Instrument.Flute;
     private bool changingWeapon = false;
     private float targetRot = 0;
     private int audioProgression = 0;
-    
+
     private void Awake()
     {
         Instance = this;

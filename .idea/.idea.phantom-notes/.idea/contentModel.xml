@@ -55,6 +55,7 @@
           <e p="Flicker.cs" t="Include" />
           <e p="InstrumentEnum.cs" t="Include" />
           <e p="InstrumentSpawner.cs" t="Include" />
+          <e p="NumberRise.cs" t="Include" />
           <e p="PickupInstrument.cs" t="Include" />
           <e p="PlayerCollision.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
@@ -66,6 +67,7 @@
           <e p="SoundScheduler.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
+          <e p="3DText.shader" t="Include" />
           <e p="AlphaSelfIllum.shader" t="Include" />
         </e>
         <e p="SineVFX" t="Include">

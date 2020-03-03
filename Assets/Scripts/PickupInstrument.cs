@@ -9,7 +9,7 @@ public class PickupInstrument : MonoBehaviour
     public float hooverDistance;
     public float hooverSpeed;
     public int secondsToDisappear;
-    public AudioClip[] pickupSounds;
+    public AudioClip pickupSound;
     
     private PlayerController player;
 
@@ -34,7 +34,7 @@ public class PickupInstrument : MonoBehaviour
         var playerDistance = Vector3.Distance(player.transform.position, transform.position);
         if (playerDistance < pickupDistance)
         {
-            SoundGuy.Instance.PlaySound(Vector3.zero, 1, pickupSounds[(int) instrument]);
+            SoundGuy.Instance.PlaySound(Vector3.zero, 1, pickupSound);
             Destroy(gameObject, 0);
             PlayerWeaponController.Instance.AddAmmo(instrument);
         }
