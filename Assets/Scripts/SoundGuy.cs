@@ -31,7 +31,7 @@ public class SoundGuy : MonoBehaviour
 
         yield return new WaitForSeconds(audioFile.length);
 
-        GameObject.Destroy(newAudioObject);
+        GameObject.Destroy(newAudioObject.gameObject);
     }
 
 
