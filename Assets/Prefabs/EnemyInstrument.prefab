@@ -117,7 +117,7 @@ MonoBehaviour:
   - instrumentType: 2
     meshInstrument: {fileID: 3968730838901263556, guid: a12585ae75cd84ee4aa9430a7e2556aa,
       type: 3}
-  numberRise: {fileID: 4838056269089942852, guid: 2d3983522e66e744288cc88946a95b90,
+  numberRise: {fileID: 4838056269089942852, guid: f04b1151d9fcfce42bd2aeacbba6d10a,
     type: 3}
 --- !u!54 &5856405960626760477
 Rigidbody:

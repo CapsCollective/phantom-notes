@@ -68,7 +68,7 @@ public class PlayerWeaponController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            if (weaponAmmo[(int)currentWeapon] > 0)
+            if (weaponAmmo[(int)currentWeapon] > 0 || currentWeapon == Instrument.Flute)
             {
                 --weaponAmmo[(int)currentWeapon];
                 RaycastHit hit;
