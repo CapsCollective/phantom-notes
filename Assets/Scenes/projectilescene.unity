@@ -121,9 +121,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!20 &156012293 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6725314470276142375, guid: b816e252378bc4c27aa50746d4459acd,
+--- !u!4 &286984986 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6554620323807746160, guid: b816e252378bc4c27aa50746d4459acd,
     type: 3}
   m_PrefabInstance: {fileID: 4876603913529260561}
   m_PrefabAsset: {fileID: 0}
@@ -377,13 +377,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624752773}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 25.9, y: 0, z: 0}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 26.2}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 90}
 --- !u!1 &1669466700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4876603913957649073, guid: b816e252378bc4c27aa50746d4459acd,
@@ -711,11 +711,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4876603913957649073, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4876603913957649077, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_Enabled
@@ -748,21 +743,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
-      propertyPath: projectile
+      propertyPath: projSpawnLocation
       value: 
-      objectReference: {fileID: 5107522740803997174, guid: a999df2813e1c42f79792350335c7982,
-        type: 3}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 156012293}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 5107522740803997175, guid: a999df2813e1c42f79792350335c7982,
-        type: 3}
+      objectReference: {fileID: 286984986}
     - target: {fileID: 6401985215337747530, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_Layer

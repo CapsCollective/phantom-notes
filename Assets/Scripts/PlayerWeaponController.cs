@@ -11,6 +11,7 @@ public class PlayerWeaponController : MonoBehaviour
     public int weaponChangeSpeed;
 
     public float projVDisplacement, projHDisplacement;
+    public Transform projSpawnLocation;
     
     public static PlayerWeaponController Instance;
 
@@ -66,7 +67,11 @@ public class PlayerWeaponController : MonoBehaviour
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
             {
                 //raycast hits something
-                GameObject proj = Instantiate(projectilePrefab, cam.transform.position - new Vector3(projHDisplacement, projVDisplacement, 0f), new Quaternion());
+                //print("aiming at: " + hit.collider.gameObject.name);
+                Vector3 spawnDisplacement = new Vector3(projHDisplacement, projVDisplacement, 0f);
+                spawnDisplacement = cam.transform.InverseTransformVector(spawnDisplacement);
+                //GameObject proj = Instantiate(projectilePrefab, cam.transform.position - spawnDisplacement, new Quaternion());
+                GameObject proj = Instantiate(projectilePrefab, projSpawnLocation.position, new Quaternion());
                 proj.transform.LookAt(hit.point);
                 proj.transform.Rotate(90f, 0f, 0f, Space.Self);
             }
