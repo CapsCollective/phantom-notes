@@ -4,7 +4,11 @@ public class Projectile : MonoBehaviour
 {
     public float bulletSpeed;
 
+    public Instrument instrument;
+
     private Rigidbody rb;
+
+    private int[] weaponDamages = {5, 3, 15};
 
     private void Start()
     {
@@ -19,7 +23,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<EnemyInstrument>().Damage(5);
+            collision.gameObject.GetComponent<EnemyInstrument>().Damage(weaponDamages[(int) instrument]);
         }
         Destroy(gameObject);
     }

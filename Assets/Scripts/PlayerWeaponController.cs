@@ -68,13 +68,14 @@ public class PlayerWeaponController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            if (weaponAmmo[(int)currentWeapon] > 0)
+            if (weaponAmmo[(int)currentWeapon] > 0 || currentWeapon == Instrument.Flute)
             {
                 --weaponAmmo[(int)currentWeapon];
                 RaycastHit hit;
                 if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit) && Time.time >= nextFire)
                 {
                     GameObject proj = Instantiate(projectilePrefabs[(int) currentWeapon], projSpawnLocations[0].position, new Quaternion());
+                    proj.GetComponent<Projectile>().instrument = currentWeapon;
                     proj.transform.LookAt(hit.point);
                     proj.transform.Rotate(90f, 0f, 0f, Space.Self);
                 }
