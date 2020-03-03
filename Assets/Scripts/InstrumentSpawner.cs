@@ -8,12 +8,12 @@ public class InstrumentSpawner : MonoBehaviour
     
     void Start()
     {
-        InvokeRepeating(nameof(SpawnInstrument), 2.0f, 3f);
+        InvokeRepeating(nameof(SpawnInstrument), 2.0f, 10f);
     }
 
     void SpawnInstrument()
     {
         GameObject newEnemy = Instantiate(enemyPrefab, transform.position, new Quaternion());
-        newEnemy.GetComponent<EnemyInstrument>().Setup(Instrument.Flute); /// <----- CHANGE TO SELECT INSTRUMENT
+        newEnemy.GetComponent<EnemyInstrument>().Setup((Instrument) Random.Range(0, 3));
     }
 }

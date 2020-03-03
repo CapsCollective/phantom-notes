@@ -53,9 +53,8 @@ public class EnemyInstrument : MonoBehaviour
         instrument = _instrument;
 
         foreach (InstrumentToObject instrumentObject in instrumentObjects)
-            if (instrumentObject.instrumentType == Instrument.Flute)
+            if (instrumentObject.instrumentType == _instrument)
                 currentInstrumentObject = instrumentObject.meshInstrument;
-
 
         GameObject newObj = Instantiate(currentInstrumentObject, transform);
         Outline newOutline = newObj.AddComponent<Outline>();
