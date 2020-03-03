@@ -11,9 +11,12 @@ public class PlayerScoreController : MonoBehaviour
 
     public PostProcessProfile profile;
 
+    public TextMesh healthText;
+
     void Start()
     {
         profile.GetSetting<Vignette>().intensity.value = 0.28f;
+        healthText.text = ""+(int)health;
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class PlayerScoreController : MonoBehaviour
         }
 
         profile.GetSetting<Vignette>().intensity.value = map(health, 0, 100, 1, 0.28f);
+        healthText.text = "" + (int)health;
     }
 
     private void Die()
