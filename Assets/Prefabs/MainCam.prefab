@@ -1181,6 +1181,13 @@ MonoBehaviour:
   - {fileID: 945251965995792373}
   - {fileID: 6910550426420173856}
   weaponChangeSpeed: 200
+<<<<<<< HEAD
+=======
+  emptySound: {fileID: 8300000, guid: 718727d0445824b53b3b165e52ba4870, type: 3}
+  projVDisplacement: 0.15
+  projHDisplacement: 0.2
+  projSpawnLocation: {fileID: 6972143107677178292}
+>>>>>>> 6137fc13f525d8783749ba386d59fb1b8162d64c
 --- !u!1 &8318838773055495153
 GameObject:
   m_ObjectHideFlags: 0

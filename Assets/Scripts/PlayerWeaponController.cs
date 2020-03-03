@@ -11,6 +11,7 @@ public class PlayerWeaponController : MonoBehaviour
     public float[] fireRates;
     public Transform[] projSpawnLocations;
     public int weaponChangeSpeed;
+    public AudioClip emptySound;
 
     //public Transform projSpawnLocation;
     
@@ -103,7 +104,7 @@ public class PlayerWeaponController : MonoBehaviour
             }
             else
             {
-                //play click
+                SoundGuy.Instance.PlaySound(Vector3.zero, 1, emptySound);
             }
         }
     }
