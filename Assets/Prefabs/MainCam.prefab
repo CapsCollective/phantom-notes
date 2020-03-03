@@ -536,7 +536,7 @@ MonoBehaviour:
   weaponChangeSpeed: 200
   projVDisplacement: 0.15
   projHDisplacement: 0.2
-  projSpawnLocation: {fileID: 0}
+  projSpawnLocation: {fileID: 6972143107677178292}
 --- !u!1 &8318838773055495153
 GameObject:
   m_ObjectHideFlags: 0
