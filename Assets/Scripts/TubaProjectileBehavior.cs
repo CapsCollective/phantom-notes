@@ -46,7 +46,7 @@ public class TubaProjectileBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<EnemyInstrument>().Damage(5);
+            collision.gameObject.GetComponent<EnemyInstrument>().Damage(15);
         }
         else if (collision.gameObject.CompareTag("Untagged"))
         {

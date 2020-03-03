@@ -230,6 +230,12 @@ PrefabInstance:
       propertyPath: weaponArray.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
+        type: 3}
+      propertyPath: projectilePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1130037376036489520, guid: 3b6ba24ea44ae104ea844525120c14de,
+        type: 3}
     - target: {fileID: 6387277825286763412, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_IsActive
