@@ -763,16 +763,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5107522740803997175, guid: a999df2813e1c42f79792350335c7982,
         type: 3}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: projVDisplacement
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: projHDisplacement
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 6401985215337747530, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_Layer

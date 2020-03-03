@@ -503,6 +503,8 @@ MonoBehaviour:
   - {fileID: 7102348225560371792}
   - {fileID: 3080649076745512072}
   weaponChangeSpeed: 200
+  projVDisplacement: 0.15
+  projHDisplacement: 0.2
 --- !u!1 &8318838773055495153
 GameObject:
   m_ObjectHideFlags: 0
