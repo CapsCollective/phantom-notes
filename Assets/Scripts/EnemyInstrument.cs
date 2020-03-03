@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class EnemyInstrument : MonoBehaviour
 {
-    public AudioClip[] deathSounds;
     public GameObject pickupPrefab;
     public float knockBack;
     
@@ -86,7 +85,6 @@ public class EnemyInstrument : MonoBehaviour
 
         if (health <= 0)
         {
-            SoundGuy.Instance.PlaySound(1, deathSounds[(int) instrument]);
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             newObj.transform.SetParent(null);
             Destroy(gameObject);

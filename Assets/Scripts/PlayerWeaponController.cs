@@ -13,8 +13,7 @@ public class PlayerWeaponController : MonoBehaviour
     public Transform projSpawnLocation;
     
     public static PlayerWeaponController Instance;
-    
-    
+
     private int[] weaponAmmo = {5, 1, 1, 1};
     private Instrument currentWeapon = Instrument.Flute;
     private bool changingWeapon = false;
