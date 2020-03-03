@@ -18,6 +18,7 @@ public class PlayerWeaponController : MonoBehaviour
     private Instrument currentWeapon = Instrument.Flute;
     private bool changingWeapon = false;
     private float targetRot = 0;
+    private int audioProgression = 0;
     
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class PlayerWeaponController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             changingWeapon = true;
+            audioProgression = 0;
             targetRot += 120 % 360;
             currentWeapon = GetWeapon(1);
         }
@@ -71,6 +73,9 @@ public class PlayerWeaponController : MonoBehaviour
                 proj.transform.Rotate(90f, 0f, 0f, Space.Self);
             }
             //projectileInstance.GetComponent<Rigidbody>().velocity = transform.InverseTransformPoint(Vector3.forward) * 0.1f;
+            var sounds = weaponArray[(int) currentWeapon].GetComponents<AudioSource>();
+            sounds[audioProgression].Play();
+            audioProgression = (audioProgression + 1) % sounds.Length;
         }
     }
 
