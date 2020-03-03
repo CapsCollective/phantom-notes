@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     private Rigidbody rb;
 
     private int[] weaponDamages = {5, 3, 15};
+    private float cullTime;
 
 
     public TimeClick timeClickObj;
@@ -17,8 +18,21 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.up * bulletSpeed;
+        if (instrument == Instrument.Tuba)
+        {
+            cullTime = Time.time + 3f;
+        }
     }
-    
+
+    private void Update()
+    {
+        if (instrument == Instrument.Tuba)
+        {
+            if (Time.time >= cullTime) { Destroy(gameObject); }
+            rb.transform.localScale += new Vector3(3 * Time.deltaTime, 0f, 3 * Time.deltaTime);
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("enemy"))
