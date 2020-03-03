@@ -633,6 +633,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: d334e9d083c1316409929ff2aa3890ce, type: 3}
     - {fileID: 8300000, guid: e93caf8899dcf2949bcaa023ff33f931, type: 3}
     trackLength: 9.6
+  bgLoops:
+  - {fileID: 8300000, guid: 8aabe678dafe80e4fb375736bff22dc7, type: 3}
+  - {fileID: 8300000, guid: 040290ef49f783146aef0cb47550405d, type: 3}
 --- !u!114 &1092591261
 MonoBehaviour:
   m_ObjectHideFlags: 0

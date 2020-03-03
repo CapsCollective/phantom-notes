@@ -27,19 +27,31 @@ public class SoundGuy : MonoBehaviour
         StartCoroutine(PlaySoundRun(_pos, pitch, audioFile));
     }
 
-    private IEnumerator PlaySoundRun (Vector3 _pos, float pitch, AudioClip audioFile)
+    public void PlaySound(Vector3 _pos, float pitch, AudioClip audioFile, bool _d, bool _k)
+    {
+        if (_d)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        StartCoroutine(PlaySoundRun(_pos, pitch, audioFile, _k));
+    }
+
+    private IEnumerator PlaySoundRun (Vector3 _pos, float pitch, AudioClip audioFile, bool _keepAlive = false)
     {
         AudioSource newAudioObject = Instantiate(audioObject);
         newAudioObject.transform.position = _pos;
        // AudioClip clip = (AudioClip)Resources.Load("Sounds/" + filename, typeof(AudioClip));
         newAudioObject.clip = audioFile;
         newAudioObject.pitch = pitch;
+        if (_keepAlive)
+            newAudioObject.loop = true;
 
         newAudioObject.Play();
 
         yield return new WaitForSeconds(audioFile.length);
 
-        GameObject.Destroy(newAudioObject.gameObject);
+        if (!_keepAlive)
+            GameObject.Destroy(newAudioObject.gameObject);
     }
 
 
