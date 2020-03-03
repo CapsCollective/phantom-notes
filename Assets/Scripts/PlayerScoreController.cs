@@ -1,21 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PlayerScoreController : MonoBehaviour
 {
+    private float maxHealth = 100f;
     private float health = 100f;
     private int score = 0;
 
+    public PostProcessProfile profile;
+
+    public TextMesh healthText;
+
     void Start()
     {
-
+        profile.GetSetting<Vignette>().intensity.value = 0.28f;
+        healthText.text = ""+(int)health;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        health += Time.deltaTime;
+        if (health > maxHealth)
+            health = maxHealth;
     }
 
     public float GetHealth() { return health; }
@@ -26,10 +35,19 @@ public class PlayerScoreController : MonoBehaviour
         {
             Die();
         }
+
+        profile.GetSetting<Vignette>().intensity.value = map(health, 0, 100, 1, 0.28f);
+        healthText.text = "" + (int)health;
     }
 
     private void Die()
     {
         print("Player is dead, return to menu");
     }
+
+    float map(float s, float a1, float a2, float b1, float b2)
+    {
+        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+    }
+
 }

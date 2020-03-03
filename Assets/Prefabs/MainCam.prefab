@@ -822,11 +822,11 @@ MonoBehaviour:
   - {fileID: 1803730831714313496}
   - {fileID: 7102348225560371792}
   - {fileID: 3080649076745512072}
+  fireRates: []
+  projSpawnLocations:
+  - {fileID: 6972143107677178292}
   weaponChangeSpeed: 200
   emptySound: {fileID: 8300000, guid: 718727d0445824b53b3b165e52ba4870, type: 3}
-  projVDisplacement: 0.15
-  projHDisplacement: 0.2
-  projSpawnLocation: {fileID: 6972143107677178292}
 --- !u!1 &8318838773055495153
 GameObject:
   m_ObjectHideFlags: 0
