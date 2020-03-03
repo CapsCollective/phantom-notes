@@ -131,6 +131,7 @@
           <e p="Projectile.cs" t="Include" />
           <e p="SoundGuy.cs" t="Include" />
           <e p="SoundScheduler.cs" t="Include" />
+          <e p="TimeClick.cs" t="Include" />
           <e p="TubaProjectileBehavior.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
