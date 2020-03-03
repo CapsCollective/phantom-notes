@@ -77,6 +77,8 @@ public class PlayerWeaponController : MonoBehaviour
                     GameObject proj = Instantiate(projectilePrefabs[(int) currentWeapon], projSpawnLocations[0].position, new Quaternion());
                     proj.transform.LookAt(hit.point);
                     proj.transform.Rotate(90f, 0f, 0f, Space.Self);
+
+                    proj.gameObject.GetComponent<TimeClick>().criticalClickValue = SoundScheduler.Instance.Critical;
                 }
             }
             else

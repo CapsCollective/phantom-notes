@@ -10,6 +10,9 @@ public class Projectile : MonoBehaviour
 
     private int[] weaponDamages = {5, 3, 15};
 
+
+    public TimeClick timeClickObj;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -20,7 +23,8 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<EnemyInstrument>().Damage(weaponDamages[(int) instrument]);
+           // if (timeClickObj)
+            collision.gameObject.GetComponent<EnemyInstrument>().Damage(weaponDamages[(int) instrument], timeClickObj);
         }
         Destroy(gameObject);
     }

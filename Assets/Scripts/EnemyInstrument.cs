@@ -96,8 +96,13 @@ public class EnemyInstrument : MonoBehaviour
         }
     }
 
-    public void Damage(int value)
+    public void Damage(int value, TimeClick _timeClick)
     {
+
+        int criticalWeight = (int)(_timeClick.criticalClickValue * 20); // 0 to 20
+
+        value += criticalWeight;
+
         health -= value;
         NumberRise newNumberRise = Instantiate(numberRise, transform);
         newNumberRise.transform.SetParent(null);
