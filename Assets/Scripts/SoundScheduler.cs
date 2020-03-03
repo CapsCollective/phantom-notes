@@ -30,6 +30,8 @@ public class SoundScheduler : MonoBehaviour
     private float criticalMax;
     private float criticalCounter;
 
+    public List<AudioClip> bgLoops;
+
     private void Awake()
     {
         Instance = this;
@@ -39,6 +41,11 @@ public class SoundScheduler : MonoBehaviour
     void Start()
     {
         StartCoroutine(PlayTrack(0));
+
+        foreach (AudioClip clip in bgLoops)
+            SoundGuy.Instance.PlaySound(Vector3.zero, 1, clip, false, true);
+        
+               
     }
 
     private IEnumerator PlayTrack (int _trackID)
