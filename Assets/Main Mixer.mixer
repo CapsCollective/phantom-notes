@@ -55,20 +55,6 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
---- !u!244 &-8575965262456689036
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: c9972fa21df58eb42ab6274536df3297
-  m_EffectName: Attenuation
-  m_MixLevel: 47ef48cec137fe343ab1cbb9e9daa4e8
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!244 &-8294862022106997785
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -125,25 +111,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!243 &-6868707749019785572
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Cymbal Gunshot
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 331e5fba112c3824ca1cabf272ac9c80
-  m_Children: []
-  m_Volume: 10da41aa4c83e2f4f9650a8258c88315
-  m_Pitch: 10405f272e8381a41bbb2f648672d523
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: -1636459746816995344}
-  m_UserColorIndex: 3
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!243 &-6863507477037513531
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -158,8 +125,6 @@ AudioMixerGroupController:
   - {fileID: -1956263008579760956}
   - {fileID: -2968242992591558253}
   - {fileID: -2953347873056968899}
-  - {fileID: -961280681359399558}
-  - {fileID: -2593175131177238830}
   - {fileID: 7126461096980373098}
   - {fileID: 3200095901726908271}
   m_Volume: ecd8b816275a5fa46b541231161cc945
@@ -186,7 +151,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 5289226321890725567}
-  m_UserColorIndex: 7
+  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -222,25 +187,6 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 6581729784197079792}
   m_UserColorIndex: 1
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
---- !u!243 &-6045850143783834386
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Violin Gunshot
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: c5e9f1adbe8131c4181b6e6927d8ccc9
-  m_Children: []
-  m_Volume: 844d740f4678dd243b1334d8f4b00f4c
-  m_Pitch: cdf79b4b13bb4a24489a5e03e3d821c5
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 3785684102810253350}
-  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -328,44 +274,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!243 &-4746252421142611591
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Cymbal Impact
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: de6aa5220dfd66f478973fb8a287f2bc
-  m_Children: []
-  m_Volume: 10f2d12e9a858bd4d83e19f77b2435b4
-  m_Pitch: c29387c302c62dc4ab0f1b681c191ac5
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: -8575965262456689036}
-  m_UserColorIndex: 3
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
---- !u!243 &-4655113451194417126
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Cymbal Enemy
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: d22c444f787a0234c969168590ca4910
-  m_Children: []
-  m_Volume: 2174efd64f091a74d82c4f34d5d8f00a
-  m_Pitch: 3f2fcf23214abae46863990a4226c83e
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 2793729810671498977}
-  m_UserColorIndex: 3
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!243 &-4620290250168599786
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -437,25 +345,6 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
---- !u!243 &-3185914992429441131
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Violin Enemy
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 2ff07d2c9501da84596f023a2b102285
-  m_Children: []
-  m_Volume: 7cd7250791eebee46b255e1a95278f8a
-  m_Pitch: a99aea2f9ff236c42b4fb85bab5d1131
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 1238968845361935384}
-  m_UserColorIndex: 5
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!243 &-2968242992591558253
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -471,7 +360,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -7112781134605300784}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 3
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -512,29 +401,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!243 &-2593175131177238830
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Cymbal
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 13086166d23bfc544a24c00fc7a89d89
-  m_Children:
-  - {fileID: 3296684158147212583}
-  - {fileID: -4655113451194417126}
-  - {fileID: -6868707749019785572}
-  - {fileID: -4746252421142611591}
-  m_Volume: d62a2de9cb84e0d4f84f2203663600e8
-  m_Pitch: 6a298ff8c6f71424f8121cc669099bea
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 2596882542002439831}
-  m_UserColorIndex: 3
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!243 &-2240584346442067102
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -591,24 +457,10 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -8176157123374731827}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 3
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
---- !u!244 &-1905406626497098213
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: fd0c16dab57869a4a954d13524a7420e
-  m_EffectName: Attenuation
-  m_MixLevel: 335fc199a30008646ab0e0c85c8e7564
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!244 &-1797785917768672099
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -619,20 +471,6 @@ AudioMixerEffectController:
   m_EffectID: 9d473787580167845a4760285a4db02f
   m_EffectName: Attenuation
   m_MixLevel: 700d8f12e0aee8442b3d161f0d0a0edd
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!244 &-1636459746816995344
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: ae1c1930e2a76bb4e912c282b4f5e3fe
-  m_EffectName: Attenuation
-  m_MixLevel: 3dbcba54700e4dd41839c9ffb7ff4c3a
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
@@ -671,30 +509,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 4936771032602363137}
-  m_UserColorIndex: 0
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
---- !u!243 &-961280681359399558
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Violin
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 3ebcacf2cd93e7a4ba53b75f26e18cbd
-  m_Children:
-  - {fileID: 7634325199016320828}
-  - {fileID: -3185914992429441131}
-  - {fileID: -6045850143783834386}
-  - {fileID: 1118398551790148153}
-  m_Volume: 9055f9cde50137744b2f5a736e0a5db2
-  m_Pitch: f00cbd6a9fdb12a41805b81cca134062
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 7613526422599436015}
-  m_UserColorIndex: 5
+  m_UserColorIndex: 3
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -761,7 +576,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -1797785917768672099}
-  m_UserColorIndex: 7
+  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -818,16 +633,6 @@ AudioMixerController:
     - c825213023b500b46876cecde12bb710
     - f7b854800203c1147978067d4458bdd1
     - d994f85655c082245aef4258ca76c8bb
-    - 3ebcacf2cd93e7a4ba53b75f26e18cbd
-    - bab26c22e31fddb42860c25179643ba5
-    - 2ff07d2c9501da84596f023a2b102285
-    - c5e9f1adbe8131c4181b6e6927d8ccc9
-    - 4a612a2be13dbab479a65bc97fafbf73
-    - 13086166d23bfc544a24c00fc7a89d89
-    - 2dac4404ae5faea4fbbda210137efaf6
-    - d22c444f787a0234c969168590ca4910
-    - 331e5fba112c3824ca1cabf272ac9c80
-    - de6aa5220dfd66f478973fb8a287f2bc
     - fba25f694ad6872448da514c983bfe51
     - 22ec8a1f04c87e1449807f46f1fc466a
     - 59e47b5159c60044d881a71f4acbb4ef
@@ -923,39 +728,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!243 &1118398551790148153
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Violin Impact
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 4a612a2be13dbab479a65bc97fafbf73
-  m_Children: []
-  m_Volume: 9a591127eb01e88419d388dcc6134bb0
-  m_Pitch: 8541e8b75cebfae4583c313f1eaca784
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: -1905406626497098213}
-  m_UserColorIndex: 5
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
---- !u!244 &1238968845361935384
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 85e2f29e4d40b6a43a662b81b2163106
-  m_EffectName: Attenuation
-  m_MixLevel: 4a034ed9e18bd584d80956579b2c1f59
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!244 &1584595396510903232
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -998,20 +770,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!244 &2596882542002439831
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: cc537c84d6e0f224890d12b35952ea33
-  m_EffectName: Attenuation
-  m_MixLevel: 8297ec3fb8354fe4d8f1a5a4040f11c0
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!244 &2745755588938614608
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -1040,20 +798,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!244 &2793729810671498977
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: cc4fcb1c13556c048971bc6575be4be9
-  m_EffectName: Attenuation
-  m_MixLevel: 591ba53f09b55e1419e25367250790d9
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!243 &3200095901726908271
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -1073,7 +817,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -5894966379530097857}
-  m_UserColorIndex: 7
+  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -1110,25 +854,6 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
---- !u!243 &3296684158147212583
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Cymbal Death
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 2dac4404ae5faea4fbbda210137efaf6
-  m_Children: []
-  m_Volume: c17ef37655f95e74a9bc30f247bbe6d1
-  m_Pitch: fe05b602d56f4c74997babb453299a29
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 3862452903370863757}
-  m_UserColorIndex: 3
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!243 &3351681887151518795
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -1144,38 +869,10 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -8972746258853103262}
-  m_UserColorIndex: 7
+  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
---- !u!244 &3785684102810253350
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 6ba6285b7fea81d4086ca4d7be212fa3
-  m_EffectName: Attenuation
-  m_MixLevel: d9dca07eb84ead841a1df3d11d70bf38
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!244 &3862452903370863757
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 1847484bae29547449d86778a41b75cb
-  m_EffectName: Attenuation
-  m_MixLevel: 6dacf0dfd5dab7447a0de5b51f6ef6fe
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!243 &3891295967886819004
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -1280,20 +977,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!244 &5381012898783553005
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: c22c5a6b784d36d4e87cfbaaba9c75e7
-  m_EffectName: Attenuation
-  m_MixLevel: f4fb0c78da726eb4e997fcd0f444ef4f
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!244 &5622662544452976048
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -1342,7 +1025,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -5315916057597851603}
-  m_UserColorIndex: 7
+  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -1394,39 +1077,6 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: -507374755619731664}
   m_UserColorIndex: 6
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
---- !u!244 &7613526422599436015
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: c6cdccb8b43a5f840bebf05603efe57a
-  m_EffectName: Attenuation
-  m_MixLevel: 10048c60c29b15f45936f228500cb408
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!243 &7634325199016320828
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Violin Death
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: bab26c22e31fddb42860c25179643ba5
-  m_Children: []
-  m_Volume: 6afd2f304dd31b049bb733647e0877cf
-  m_Pitch: 3a616cdb04c660c419b629d99d47c712
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 5381012898783553005}
-  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
