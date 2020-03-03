@@ -9,6 +9,8 @@ public class PlayerWeaponController : MonoBehaviour
     public Projectile projectile;
     public GameObject[] weaponArray;
     public int weaponChangeSpeed;
+
+    public float projVDisplacement, projHDisplacement;
     
     public static PlayerWeaponController Instance;
 
@@ -64,8 +66,9 @@ public class PlayerWeaponController : MonoBehaviour
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
             {
                 //raycast hits something
-                GameObject proj = Instantiate(projectilePrefab, cam.transform.position, new Quaternion());
+                GameObject proj = Instantiate(projectilePrefab, cam.transform.position - new Vector3(projHDisplacement, projVDisplacement, 0f), new Quaternion());
                 proj.transform.LookAt(hit.point);
+                proj.transform.Rotate(90f, 0f, 0f, Space.Self);
             }
             //projectileInstance.GetComponent<Rigidbody>().velocity = transform.InverseTransformPoint(Vector3.forward) * 0.1f;
         }

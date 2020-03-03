@@ -9,7 +9,10 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(0f, bulletSpeed, 0f);
+        //Vector3 localVelo = new Vector3(0f, 0f, bulletSpeed);
+        //rb.velocity = transform.InverseTransformVector(localVelo);
+
+        rb.velocity = transform.up * bulletSpeed;
     }
     
     void OnCollisionEnter(Collision collision)
