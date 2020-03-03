@@ -528,12 +528,12 @@ MonoBehaviour:
   cam: {fileID: 7449422877546120419}
   projectilePrefab: {fileID: 5107522740803997175, guid: a999df2813e1c42f79792350335c7982,
     type: 3}
-  projectile: {fileID: 0}
   weaponArray:
   - {fileID: 1803730831714313496}
   - {fileID: 7102348225560371792}
   - {fileID: 3080649076745512072}
   weaponChangeSpeed: 200
+  emptySound: {fileID: 8300000, guid: 718727d0445824b53b3b165e52ba4870, type: 3}
   projVDisplacement: 0.15
   projHDisplacement: 0.2
   projSpawnLocation: {fileID: 6972143107677178292}

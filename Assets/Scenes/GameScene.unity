@@ -708,13 +708,13 @@ MonoBehaviour:
   trackLength: 38.4
   barsPerTrack: 4
   soundTracks:
-  - track: {fileID: 8300000, guid: e6997aee0417e374da42aa08abdd331d, type: 3}
+  - track: {fileID: 8300000, guid: 635a77c156c39c04fbab96b8cf5980bd, type: 3}
     trackLength: 9.6
-  - track: {fileID: 8300000, guid: c06b04d72a62340498aff3df15c7c163, type: 3}
+  - track: {fileID: 8300000, guid: 75dc7d7c9ac9ac043aac7ddb4e2a682c, type: 3}
     trackLength: 9.6
-  - track: {fileID: 8300000, guid: 6231cfcfabc6c51438cc5383403836c0, type: 3}
+  - track: {fileID: 8300000, guid: 7525ce42880fe844fb2e02d0ff4d0ffa, type: 3}
     trackLength: 9.6
-  - track: {fileID: 8300000, guid: 34f9eb4783da33f4ebfb579425cfe089, type: 3}
+  - track: {fileID: 8300000, guid: d334e9d083c1316409929ff2aa3890ce, type: 3}
     trackLength: 9.6
 --- !u!114 &1092591261
 MonoBehaviour:

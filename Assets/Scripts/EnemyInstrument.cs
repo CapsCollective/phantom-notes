@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
 public class EnemyInstrument : MonoBehaviour
 {
     public GameObject pickupPrefab;
     public float knockBack;
+    public AudioClip[] instrumentSounds;
+    public AudioClip[] deathSounds;
     
     
     private PlayerController player;
@@ -39,8 +38,11 @@ public class EnemyInstrument : MonoBehaviour
     public List<InstrumentToObject> instrumentObjects;
     private GameObject currentInstrumentObject;
 
+    public NumberRise numberRise;
+
     private void Start()
     {
+        SoundGuy.Instance.PlaySound(transform.position, 1, instrumentSounds[(int) instrument]);
         health = healthValues[(int) instrument];
         player = PlayerController.Instance;
         seed = Random.Range(0, 100);
@@ -85,6 +87,7 @@ public class EnemyInstrument : MonoBehaviour
 
         if (health <= 0)
         {
+            SoundGuy.Instance.PlaySound(transform.position, 1, deathSounds[(int) instrument]);
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             newObj.transform.SetParent(null);
             Destroy(gameObject);
@@ -96,5 +99,10 @@ public class EnemyInstrument : MonoBehaviour
     public void Damage(int value)
     {
         health -= value;
+        NumberRise newNumberRise = Instantiate(numberRise, transform);
+        newNumberRise.transform.SetParent(null);
+
+        newNumberRise.Setup(value);
+        newNumberRise.RunEffect(Random.Range(4, 8));
     }
 }

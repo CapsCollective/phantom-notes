@@ -8,6 +8,7 @@ public class PlayerWeaponController : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject[] weaponArray;
     public int weaponChangeSpeed;
+    public AudioClip emptySound;
 
     public float projVDisplacement, projHDisplacement;
     public Transform projSpawnLocation;
@@ -87,7 +88,7 @@ public class PlayerWeaponController : MonoBehaviour
             }
             else
             {
-                //play click
+                SoundGuy.Instance.PlaySound(Vector3.zero, 1, emptySound);
             }
         }
     }
