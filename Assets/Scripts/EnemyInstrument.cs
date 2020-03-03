@@ -10,14 +10,12 @@ public class EnemyInstrument : MonoBehaviour
     public AudioClip[] deathSounds;
     public GameObject pickupPrefab;
     public float knockBack;
-    private AudioSource audioSource;
     
     
     private PlayerController player;
     private float time = 1000;
     private float i = 0;
     private float rate = 0;
-    private bool died = false;
 
     private Instrument instrument;
     
@@ -44,8 +42,6 @@ public class EnemyInstrument : MonoBehaviour
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.clip = deathSounds[(int) instrument];
         health = healthValues[(int) instrument];
         player = PlayerController.Instance;
         seed = Random.Range(0, 100);
@@ -89,16 +85,14 @@ public class EnemyInstrument : MonoBehaviour
 
         transform.LookAt(player.transform);
 
-        if (health <= 0 && !died)
+        if (health <= 0)
         {
-            died = true;
-            audioSource.Play();
+            SoundGuy.Instance.PlaySound(1, deathSounds[(int) instrument]);
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             newObj.transform.SetParent(null);
-            Destroy(gameObject, audioSource.clip.length);
+            Destroy(gameObject);
             newObj.GetComponent<Rigidbody>().velocity = newPos * knockBack;
             newObj.GetComponent<PickupInstrument>().Setup(instrument, currentInstrumentObject);
-            transform.position = Vector3.one * 9999f;
         }
     }
 
