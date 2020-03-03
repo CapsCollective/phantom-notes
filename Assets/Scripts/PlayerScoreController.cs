@@ -15,6 +15,10 @@ public class PlayerScoreController : MonoBehaviour
 
     public AudioSource a;
 
+    public AudioClip deathSound;
+
+    private bool died = false;
+
     void Start()
     {
         profile.GetSetting<Vignette>().intensity.value = 0.28f;
@@ -28,15 +32,17 @@ public class PlayerScoreController : MonoBehaviour
         health += Time.deltaTime;
         if (health > maxHealth)
             health = maxHealth;
+
     }
 
     public float GetHealth() { return health; }
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
-        if (health <= 0)
+        if (health <= 0 && !died)
         {
             Die();
+            died = true;
         }
 
         profile.GetSetting<Vignette>().intensity.value = map(health, 0, 100, 1, 0.28f);
@@ -47,6 +53,15 @@ public class PlayerScoreController : MonoBehaviour
     private void Die()
     {
         print("Player is dead, return to menu");
+        StartCoroutine(DelayDeath());
+    }
+
+    private IEnumerator DelayDeath ()
+    {
+        SoundGuy.Instance.PlaySound(Vector3.zero, 1, deathSound, false);
+        yield return new WaitForSeconds(0.5f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
+
     }
 
     float map(float s, float a1, float a2, float b1, float b2)
