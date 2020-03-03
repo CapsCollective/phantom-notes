@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
 public class EnemyInstrument : MonoBehaviour
 {
     public GameObject pickupPrefab;
     public float knockBack;
+    public AudioClip[] instrumentSounds;
+    public AudioClip[] deathSounds;
+    
     
     private PlayerController player;
     private float time = 1000;
@@ -16,7 +16,11 @@ public class EnemyInstrument : MonoBehaviour
     private float rate = 0;
 
     private Instrument instrument;
+    
+    private int[] healthValues = new int[] {10, 20, 30, 5};
 
+    private int health;
+    
     private float seed;
 
     public float minYFloor;
@@ -34,8 +38,12 @@ public class EnemyInstrument : MonoBehaviour
     public List<InstrumentToObject> instrumentObjects;
     private GameObject currentInstrumentObject;
 
+    public NumberRise numberRise;
+
     private void Start()
     {
+        SoundGuy.Instance.PlaySound(transform.position, 1, instrumentSounds[(int) instrument]);
+        health = healthValues[(int) instrument];
         player = PlayerController.Instance;
         seed = Random.Range(0, 100);
     }
@@ -46,9 +54,8 @@ public class EnemyInstrument : MonoBehaviour
         instrument = _instrument;
 
         foreach (InstrumentToObject instrumentObject in instrumentObjects)
-            if (instrumentObject.instrumentType == Instrument.Flute)
+            if (instrumentObject.instrumentType == _instrument)
                 currentInstrumentObject = instrumentObject.meshInstrument;
-
 
         GameObject newObj = Instantiate(currentInstrumentObject, transform);
         Outline newOutline = newObj.AddComponent<Outline>();
@@ -77,13 +84,30 @@ public class EnemyInstrument : MonoBehaviour
         rb.AddForce(randomNoise);
 
         transform.LookAt(player.transform);
-        
-        if (Input.GetKeyUp(KeyCode.K))
+
+        if (health <= 0)
         {
+            SoundGuy.Instance.PlaySound(transform.position, 1, deathSounds[(int) instrument]);
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
-            Destroy(gameObject,0);
+            newObj.transform.SetParent(null);
+            Destroy(gameObject);
             newObj.GetComponent<Rigidbody>().velocity = newPos * knockBack;
             newObj.GetComponent<PickupInstrument>().Setup(instrument, currentInstrumentObject);
         }
+    }
+
+    public void Damage(int value, TimeClick _timeClick)
+    {
+
+        int criticalWeight = (int)(_timeClick.criticalClickValue * 20); // 0 to 20
+
+        value += criticalWeight;
+
+        health -= value;
+        NumberRise newNumberRise = Instantiate(numberRise, transform);
+        newNumberRise.transform.SetParent(null);
+
+        newNumberRise.Setup(value);
+        newNumberRise.RunEffect(Random.Range(4, 8));
     }
 }

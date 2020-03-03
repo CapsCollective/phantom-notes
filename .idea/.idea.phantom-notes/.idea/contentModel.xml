@@ -7,6 +7,69 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_MK" t="Include">
+          <e p="MKGlassFree" t="Include">
+            <e p="Editor" t="Include">
+              <e p="MKGlassFreeEditor.cs" t="Include" />
+            </e>
+            <e p="MKGlassFreeMaterialHelper.cs" t="Include" />
+            <e p="Shader" t="Include">
+              <e p="Inc" t="Include">
+                <e p="Common" t="Include">
+                  <e p="MKGlassDef.cginc" t="Include" />
+                  <e p="MKGlassInc.cginc" t="Include" />
+                  <e p="MKGlassLight.cginc" t="Include" />
+                  <e p="MKGlassV.cginc" t="Include" />
+                </e>
+                <e p="Forward" t="Include">
+                  <e p="MKGlassForward.cginc" t="Include" />
+                  <e p="MKGlassForwardAddSetup.cginc" t="Include" />
+                  <e p="MKGlassForwardBaseSetup.cginc" t="Include" />
+                  <e p="MKGlassForwardIO.cginc" t="Include" />
+                </e>
+                <e p="Meta" t="Include">
+                  <e p="MKGlassMeta.cginc" t="Include" />
+                  <e p="MKGlassMetaIO.cginc" t="Include" />
+                  <e p="MKGlassMetaSetup.cginc" t="Include" />
+                </e>
+                <e p="Surface" t="Include">
+                  <e p="MKGlassSurface.cginc" t="Include" />
+                  <e p="MKGlassSurfaceIO.cginc" t="Include" />
+                </e>
+                <e p="VertexLit" t="Include">
+                  <e p="MKGlassVertexLit.cginc" t="Include" />
+                  <e p="MKGlassVertexLitIO.cginc" t="Include" />
+                  <e p="MKGlassVertexLitSetup.cginc" t="Include" />
+                </e>
+              </e>
+              <e p="MKGlassCommonFree.shader" t="Include" />
+              <e p="MKGlassFree.shader" t="Include" />
+            </e>
+          </e>
+          <e p="MKXRayFree" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Code" t="Include">
+                <e p="AutoEnableObjects.cs" t="Include" />
+                <e p="InfoTextDisable.cs" t="Include" />
+                <e p="MKXRayCopyPropertiesRuntime.cs" t="Include" />
+                <e p="MKXRayDemoControl.cs" t="Include" />
+                <e p="MKXRayDemoMouseOrbitImproved.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Editor" t="Include">
+              <e p="MKXRayFreeEditor.cs" t="Include" />
+            </e>
+            <e p="MKXRayFreeMaterialHelper.cs" t="Include" />
+            <e p="Shader" t="Include">
+              <e p="MKXRayFree.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Fonts" t="Include">
+          <e p="helveticaneue" t="Include">
+            <e p="freefontsdownload.txt" t="Include" />
+          </e>
+        </e>
         <e p="Kino" t="Include">
           <e p="Binary" t="Include">
             <e p="Binary.cs" t="Include" />
@@ -55,15 +118,24 @@
           <e p="Flicker.cs" t="Include" />
           <e p="InstrumentEnum.cs" t="Include" />
           <e p="InstrumentSpawner.cs" t="Include" />
+          <e p="MenuScripts" t="Include">
+            <e p="MenuButton.cs" t="Include" />
+          </e>
+          <e p="NumberRise.cs" t="Include" />
           <e p="PickupInstrument.cs" t="Include" />
           <e p="PlayerCollision.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealthScore.cs" t="Include" />
           <e p="PlayerScoreController.cs" t="Include" />
           <e p="PlayerWeaponController.cs" t="Include" />
+          <e p="Projectile.cs" t="Include" />
+          <e p="SoundGuy.cs" t="Include" />
           <e p="SoundScheduler.cs" t="Include" />
+          <e p="TimeClick.cs" t="Include" />
+          <e p="TubaProjectileBehavior.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
+          <e p="3DText.shader" t="Include" />
           <e p="AlphaSelfIllum.shader" t="Include" />
         </e>
         <e p="SineVFX" t="Include">

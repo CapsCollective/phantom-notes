@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float jumpClamp = 5;
 
     private float yaw, pitch;
-
+    
     private GameObject bodyObj;
     private Camera cam;
     private GameObject camObj;
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        //bodyObj = transform.GetChild(0).gameObject;
+        Cursor.lockState = CursorLockMode.Locked;
         cam = Camera.main;
         camObj = transform.GetChild(0).gameObject;
         rb = GetComponent<Rigidbody>();
