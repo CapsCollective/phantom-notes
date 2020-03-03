@@ -161,6 +161,7 @@ MonoBehaviour:
   profile: {fileID: 11400000, guid: 094cedca51e7fe444992ea56b663c9c7, type: 2}
   healthText: {fileID: 6725314470434081316}
   a: {fileID: 2232559281940846509}
+  deathSound: {fileID: 8300000, guid: 4599509360252461695d6e6521e8b4d8, type: 3}
 --- !u!82 &2232559281940846509
 AudioSource:
   m_ObjectHideFlags: 0

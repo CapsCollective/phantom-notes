@@ -18,6 +18,14 @@ public class SoundGuy : MonoBehaviour
         StartCoroutine(PlaySoundRun(_pos, pitch, audioFile));
 
     }
+    public void PlaySound(Vector3 _pos, float pitch, AudioClip audioFile, bool _d)
+    {
+        if (_d)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        StartCoroutine(PlaySoundRun(_pos, pitch, audioFile));
+    }
 
     private IEnumerator PlaySoundRun (Vector3 _pos, float pitch, AudioClip audioFile)
     {
