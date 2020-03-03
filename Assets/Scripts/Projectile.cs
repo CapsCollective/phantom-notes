@@ -3,6 +3,7 @@
 public class Projectile : MonoBehaviour
 {
     public float bulletSpeed;
+    public int secondsToDisappear;
 
     private Rigidbody rb;
 
@@ -13,6 +14,7 @@ public class Projectile : MonoBehaviour
         //rb.velocity = transform.InverseTransformVector(localVelo);
 
         rb.velocity = transform.up * bulletSpeed;
+        Invoke(nameof(Disappear), secondsToDisappear);
     }
     
     void OnCollisionEnter(Collision collision)
@@ -22,5 +24,10 @@ public class Projectile : MonoBehaviour
             collision.gameObject.GetComponent<EnemyInstrument>().Damage(5);
         }
         Destroy(gameObject);
+    }
+    
+    void Disappear()
+    {
+        Destroy(gameObject,0);
     }
 }
