@@ -15,6 +15,7 @@ public class TubaProjectileBehavior : MonoBehaviour
     //private Vector3 initialScale;
     private Vector3 currentScale;
     private float cullTime;
+    public TimeClick timeClickObj;
 
     void Start()
     {
@@ -46,7 +47,7 @@ public class TubaProjectileBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<EnemyInstrument>().Damage(15);
+            collision.gameObject.GetComponent<EnemyInstrument>().Damage(15, timeClickObj);
         }
         else if (collision.gameObject.CompareTag("Untagged"))
         {

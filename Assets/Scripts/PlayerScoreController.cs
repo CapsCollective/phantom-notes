@@ -9,6 +9,8 @@ public class PlayerScoreController : MonoBehaviour
     private float health = 100f;
     private int score = 0;
 
+    public AudioClip[] damageSounds;
+
     public PostProcessProfile profile;
 
     public TextMesh healthText;
@@ -38,6 +40,7 @@ public class PlayerScoreController : MonoBehaviour
     public float GetHealth() { return health; }
     public void TakeDamage(float damageAmount)
     {
+        SoundGuy.Instance.PlaySound(Vector3.zero, 1, damageSounds[Random.Range(1, damageSounds.Length)]);
         health -= damageAmount;
         if (health <= 0 && !died)
         {
@@ -68,5 +71,4 @@ public class PlayerScoreController : MonoBehaviour
     {
         return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
     }
-
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public struct SoundTrack
 {
-    public AudioClip track;
+    public List<AudioClip> tracks;
     public float trackLength;
 }
 
@@ -46,7 +46,8 @@ public class SoundScheduler : MonoBehaviour
         if (_trackID >= soundTracks.Count)
             yield break;
 
-        SoundGuy.Instance.PlaySound(Vector3.zero, 1, soundTracks[_trackID].track);
+        foreach (AudioClip track in soundTracks[_trackID].tracks)
+            SoundGuy.Instance.PlaySound(Vector3.zero, 1, track);
 
         yield return new WaitForSeconds(soundTracks[_trackID].trackLength);
 
