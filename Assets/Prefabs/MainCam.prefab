@@ -817,13 +817,15 @@ MonoBehaviour:
   projectilePrefabs:
   - {fileID: 5107522740803997175, guid: a999df2813e1c42f79792350335c7982, type: 3}
   - {fileID: 8418358413379173831, guid: 09c630121b56a479b9e202cb8e6c8649, type: 3}
-  - {fileID: 5107522740803997175, guid: a999df2813e1c42f79792350335c7982, type: 3}
+  - {fileID: 5107522740803997175, guid: d9cf37475257d4375ac9027dcf162feb, type: 3}
   weaponArray:
   - {fileID: 1803730831714313496}
   - {fileID: 7102348225560371792}
   - {fileID: 3080649076745512072}
   fireRates: []
   projSpawnLocations:
+  - {fileID: 6972143107677178292}
+  - {fileID: 6972143107677178292}
   - {fileID: 6972143107677178292}
   weaponChangeSpeed: 200
   emptySound: {fileID: 8300000, guid: 718727d0445824b53b3b165e52ba4870, type: 3}
