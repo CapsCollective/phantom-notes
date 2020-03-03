@@ -82,8 +82,6 @@ public class SoundScheduler : MonoBehaviour
             float distFromMiss = Mathf.Abs(timingOnBeat - 0.5f); // 0 = 0.5,  0.1=0.4,   0.5 = 0,  0.9 = 0.4, 1 = 0.5
             return distFromMiss * 2; 
         }
-
-
     }
 
 

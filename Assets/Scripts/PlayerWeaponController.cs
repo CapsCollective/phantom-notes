@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerWeaponController : MonoBehaviour
 {
     public Camera cam;
-    public GameObject projectilePrefab;
+    public GameObject[] projectilePrefabs;
     public GameObject[] weaponArray;
     public int weaponChangeSpeed;
     public AudioClip emptySound;
@@ -76,7 +76,7 @@ public class PlayerWeaponController : MonoBehaviour
                     Vector3 spawnDisplacement = new Vector3(projHDisplacement, projVDisplacement, 0f);
                     spawnDisplacement = cam.transform.InverseTransformVector(spawnDisplacement);
                     //GameObject proj = Instantiate(projectilePrefab, cam.transform.position - spawnDisplacement, new Quaternion());
-                    GameObject proj = Instantiate(projectilePrefab, projSpawnLocation.position, new Quaternion());
+                    GameObject proj = Instantiate(projectilePrefabs[(int) currentWeapon], projSpawnLocation.position, new Quaternion());
                     proj.transform.LookAt(hit.point);
                     proj.transform.Rotate(90f, 0f, 0f, Space.Self);
                 }
