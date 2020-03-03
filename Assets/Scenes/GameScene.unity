@@ -128,12 +128,6 @@ Light:
     type: 3}
   m_PrefabInstance: {fileID: 8467373167815775683}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &748334079 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6554620323807746160, guid: b816e252378bc4c27aa50746d4459acd,
-    type: 3}
-  m_PrefabInstance: {fileID: 820984880}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &820984880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,30 +227,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
-      propertyPath: projSpawnLocations.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
       propertyPath: weaponArray.Array.data[3]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: projSpawnLocations.Array.data[1]
-      value: 
-      objectReference: {fileID: 748334079}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: projSpawnLocations.Array.data[2]
-      value: 
-      objectReference: {fileID: 748334079}
-    - target: {fileID: 6312571555073447605, guid: b816e252378bc4c27aa50746d4459acd,
-        type: 3}
-      propertyPath: projectilePrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 5107522740803997175, guid: d9cf37475257d4375ac9027dcf162feb,
-        type: 3}
     - target: {fileID: 6387277825286763412, guid: b816e252378bc4c27aa50746d4459acd,
         type: 3}
       propertyPath: m_IsActive
