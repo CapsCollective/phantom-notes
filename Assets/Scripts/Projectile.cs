@@ -21,5 +21,6 @@ public class Projectile : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyInstrument>().Damage(5);
         }
+        Destroy(gameObject);
     }
 }
