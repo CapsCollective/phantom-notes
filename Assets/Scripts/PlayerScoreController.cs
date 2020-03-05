@@ -50,7 +50,7 @@ public class PlayerScoreController : MonoBehaviour
 
         profile.GetSetting<Vignette>().intensity.value = map(health, 0, 100, 1, 0.28f);
         healthText.text = "" + (int)health;
-        a.volume = map(health, 0, 100, 1, 0);
+        a.volume = map(health, 0, 100, 3, 0);
     }
 
     private void Die()
