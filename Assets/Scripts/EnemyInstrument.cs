@@ -42,8 +42,8 @@ public class EnemyInstrument : MonoBehaviour
 
     private void Start()
     {
-        SoundGuy.Instance.PlaySound(transform.position, 1, instrumentSounds[(int) instrument]);
-        health = healthValues[(int) instrument];
+        SoundGuy.Instance.PlaySound(transform.position, 1, instrumentSounds[instrument.ToInt()]);
+        health = healthValues[instrument.ToInt()];
         player = PlayerController.Instance;
         seed = Random.Range(0, 100);
     }
@@ -87,7 +87,7 @@ public class EnemyInstrument : MonoBehaviour
 
         if (health <= 0)
         {
-            SoundGuy.Instance.PlaySound(transform.position, 1, deathSounds[(int) instrument]);
+            SoundGuy.Instance.PlaySound(transform.position, 1, deathSounds[instrument.ToInt()]);
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             newObj.transform.SetParent(null);
             Destroy(gameObject);

@@ -1,15 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
-public enum Instrument
+﻿public enum Instrument
 {
     Flute,
     Guitar,
     Tuba,
 }
 
-public class DataStructures : MonoBehaviour
+static class InstrumentMethods
 {
+    public static int ToInt(this Instrument instrument)
+    {
+        return (int) instrument;
+    }
 }

@@ -17,7 +17,7 @@ public class PlayerWeaponController : MonoBehaviour
     public static PlayerWeaponController Instance;
     
     private int[] weaponAmmo = {5, 5, 5};
-    private Instrument currentWeapon = Instrument.Flute;
+    private Instrument currentInstrument = Instrument.Flute;
     private bool changingWeapon = false;
     private float nextFire = 0f;
     private float targetRot = 0;
@@ -32,7 +32,7 @@ public class PlayerWeaponController : MonoBehaviour
     {
         foreach (GameObject obj in weaponArray)
         {
-            obj.SetActive(obj == weaponArray[(int) currentWeapon]);
+            obj.SetActive(obj == weaponArray[currentInstrument.ToInt()]);
         }
         
         if (Input.GetKeyDown(KeyCode.Q))
@@ -40,7 +40,7 @@ public class PlayerWeaponController : MonoBehaviour
             changingWeapon = true;
             audioProgression = 0;
             targetRot += 120 % 360;
-            currentWeapon = GetWeapon(1);
+            currentInstrument = GetWeapon(1);
             nextFire = Time.time + 0.2f;
         }
 
@@ -60,7 +60,7 @@ public class PlayerWeaponController : MonoBehaviour
             }
             else
             {
-                weaponArray[(int) GetWeapon(-1)].SetActive(false);
+                weaponArray[GetWeapon(-1).ToInt()].SetActive(false);
                 changingWeapon = false;
                 nextFire = Time.time;
             }
@@ -68,21 +68,21 @@ public class PlayerWeaponController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            if (weaponAmmo[(int)currentWeapon] > 0 || currentWeapon == Instrument.Flute)
+            if (weaponAmmo[currentInstrument.ToInt()] > 0 || currentInstrument == Instrument.Flute)
             {
                 RaycastHit hit;
                 if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit) && Time.time >= nextFire)
                 {
-                    --weaponAmmo[(int)currentWeapon];
-                    var audioTracks = weaponArray[(int) currentWeapon].GetComponents<AudioSource>();
+                    --weaponAmmo[currentInstrument.ToInt()];
+                    var audioTracks = weaponArray[currentInstrument.ToInt()].GetComponents<AudioSource>();
                     audioTracks[audioProgression].Play();
                     audioProgression = (audioProgression + 1) % audioTracks.Length;
-                    GameObject proj = Instantiate(projectilePrefabs[(int) currentWeapon], projSpawnLocations[0].position, new Quaternion());
+                    GameObject proj = Instantiate(projectilePrefabs[currentInstrument.ToInt()], projSpawnLocations[0].position, new Quaternion());
                     proj.transform.LookAt(hit.point);
                     proj.transform.Rotate(90f, 0f, 0f, Space.Self);
 
                     proj.gameObject.GetComponent<TimeClick>().criticalClickValue = SoundScheduler.Instance.Critical;
-                    nextFire = Time.time + fireRates[(int) currentWeapon];
+                    nextFire = Time.time + fireRates[currentInstrument.ToInt()];
                 }
             }
             else
@@ -94,7 +94,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     Instrument GetWeapon(int offset)
     {
-        var rawValue = (int) currentWeapon + offset;
+        var rawValue = currentInstrument.ToInt() + offset;
         if (rawValue < 0)
         {
             rawValue += 3;
@@ -104,6 +104,6 @@ public class PlayerWeaponController : MonoBehaviour
 
     public void AddAmmo(Instrument instrument)
     {
-        ++weaponAmmo[(int) instrument];
+        ++weaponAmmo[instrument.ToInt()];
     }
 }
