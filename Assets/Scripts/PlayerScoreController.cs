@@ -64,7 +64,7 @@ public class PlayerScoreController : MonoBehaviour
         SoundGuy.Instance.PlaySound(Vector3.zero, 1, deathSound, false);
         yield return new WaitForSeconds(0.5f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
-
+        Cursor.lockState = CursorLockMode.None;
     }
 
     float map(float s, float a1, float a2, float b1, float b2)
