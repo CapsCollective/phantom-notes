@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("enemy"))
         {
            // if (timeClickObj)
-            collision.gameObject.GetComponent<EnemyInstrument>().Damage(weaponDamages[(int) instrument], timeClickObj);
+            collision.gameObject.GetComponent<EnemyInstrument>().Damage(weaponDamages[instrument.ToInt()], timeClickObj);
         }
         Destroy(gameObject);
     }

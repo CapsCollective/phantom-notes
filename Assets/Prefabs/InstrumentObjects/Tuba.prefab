@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92493612588203735}
   - component: {fileID: 1134322234170741399}
+  - component: {fileID: 3193123613416883026}
   m_Layer: 0
   m_Name: Tuba
   m_TagString: Untagged
@@ -46,6 +47,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 19.027695, y: 20.805359, z: 2.96383}
   m_Center: {x: 0.9192699, y: 1.8352151, z: -0.021645129}
+--- !u!114 &3193123613416883026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968730838901263556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8b9d3adf5d24171aa53ba50bd2f56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingSounds:
+  - {fileID: 8300000, guid: c0c5c51f6b28a493ea20180862449d0b, type: 3}
+  - {fileID: 8300000, guid: 8cec7b40f7fbd48dfbf056bf6e351b66, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: fbefa74b7b5ab034ca9036d07dc3c593, type: 3}
+  - {fileID: 8300000, guid: 30c1810cc672b1241b1737742f324c7d, type: 3}
+  - {fileID: 8300000, guid: c4d1d7bf1595be94994c63a83963e108, type: 3}
+  - {fileID: 8300000, guid: 8f52658bc1c0a43478dedbb2cde9e5f9, type: 3}
+  - {fileID: 8300000, guid: 72dd62ccf992f488eb1d0c9434a1252f, type: 3}
 --- !u!1 &4046008196457093942
 GameObject:
   m_ObjectHideFlags: 0

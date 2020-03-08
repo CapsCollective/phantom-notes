@@ -326,6 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8612497283233454808}
   - component: {fileID: 5745400676453205014}
+  - component: {fileID: 5325565294205379313}
   m_Layer: 0
   m_Name: Guitar
   m_TagString: Untagged
@@ -366,6 +367,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.887665, y: 12.145618, z: 1.7946422}
   m_Center: {x: 0.060982704, y: 1.7174605, z: -0.3973198}
+--- !u!114 &5325565294205379313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746483382390843595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8b9d3adf5d24171aa53ba50bd2f56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingSounds:
+  - {fileID: 8300000, guid: 4ff3af7cd468a434784e72ed956c9321, type: 3}
+  - {fileID: 8300000, guid: bb6e3cc327dd2cf438157139e6067e3c, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: 82d98f6c23d9bab47acee26a422dd6f5, type: 3}
+  - {fileID: 8300000, guid: a4a976f02383bdb4caf276550cefb170, type: 3}
+  - {fileID: 8300000, guid: 572b887d2cbff8d48af6dd94dcd0a5b7, type: 3}
 --- !u!1 &4789653720940307754
 GameObject:
   m_ObjectHideFlags: 0
