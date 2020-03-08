@@ -101,10 +101,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7824420684928e542bc40c427218cc53, type: 3}
   - {fileID: 8300000, guid: 4ff3af7cd468a434784e72ed956c9321, type: 3}
   - {fileID: 8300000, guid: c0c5c51f6b28a493ea20180862449d0b, type: 3}
-  deathSounds:
+  fluteDeathSounds:
   - {fileID: 8300000, guid: a4fe9a007ebe9a44e9f11471f43cf1b2, type: 3}
+  guitarDeathSounds:
   - {fileID: 8300000, guid: 82d98f6c23d9bab47acee26a422dd6f5, type: 3}
+  - {fileID: 8300000, guid: a4a976f02383bdb4caf276550cefb170, type: 3}
+  tubaDeathSounds:
   - {fileID: 8300000, guid: fbefa74b7b5ab034ca9036d07dc3c593, type: 3}
+  - {fileID: 8300000, guid: 30c1810cc672b1241b1737742f324c7d, type: 3}
+  - {fileID: 8300000, guid: 72dd62ccf992f488eb1d0c9434a1252f, type: 3}
   minYFloor: -1
   rb: {fileID: 5856405960626760477}
   instrumentObjects:

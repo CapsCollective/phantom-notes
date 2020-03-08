@@ -1,15 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyInstrument : MonoBehaviour
 {
     public GameObject pickupPrefab;
     public float knockBack;
     public AudioClip[] instrumentSounds;
-    public AudioClip[] deathSounds;
-    
-    
+    public AudioClip[] fluteDeathSounds;
+    public AudioClip[] guitarDeathSounds;
+    public AudioClip[] tubaDeathSounds;
+
     private PlayerController player;
     private float time = 1000;
     private float i = 0;
@@ -87,7 +90,8 @@ public class EnemyInstrument : MonoBehaviour
 
         if (health <= 0)
         {
-            SoundGuy.Instance.PlaySound(transform.position, 1, deathSounds[instrument.ToInt()]);
+            var deathSounds = getDeathSounds(instrument);
+            SoundGuy.Instance.PlaySound(transform.position, 1, deathSounds[Random.Range(0, deathSounds.Length)]);
             GameObject newObj = Instantiate(pickupPrefab, transform.position, transform.rotation);
             newObj.transform.SetParent(null);
             Destroy(gameObject);
@@ -109,5 +113,23 @@ public class EnemyInstrument : MonoBehaviour
 
         newNumberRise.Setup(value);
         newNumberRise.RunEffect(Random.Range(4, 8));
+    }
+
+    private AudioClip[] getDeathSounds(Instrument instrument)
+    {
+        AudioClip[] sounds = new AudioClip[0];
+        switch (instrument)
+        {
+            case Instrument.Flute:
+                sounds = fluteDeathSounds;
+                break;
+            case Instrument.Guitar:
+                sounds = guitarDeathSounds;
+                break;
+            case Instrument.Tuba:
+                sounds = tubaDeathSounds;
+                break;
+        }
+        return sounds;
     }
 }
