@@ -47,6 +47,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810442422485001666}
   - component: {fileID: 2175514732829959247}
+  - component: {fileID: -369463040857135431}
   m_Layer: 0
   m_Name: Flute
   m_TagString: Untagged
@@ -82,6 +83,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1003106, y: 1.3847384, z: 2.0471754}
   m_Center: {x: -0.014277577, y: 0.08382344, z: -0.011478186}
+--- !u!114 &-369463040857135431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810442422485001665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8b9d3adf5d24171aa53ba50bd2f56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingSounds:
+  - {fileID: 8300000, guid: 7824420684928e542bc40c427218cc53, type: 3}
+  - {fileID: 8300000, guid: e7a4fa5fe7eeeec4eaebb85d6cfa5c21, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: a4fe9a007ebe9a44e9f11471f43cf1b2, type: 3}
 --- !u!1 &3836849862630358721
 GameObject:
   m_ObjectHideFlags: 0

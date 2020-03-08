@@ -116,6 +116,7 @@
           <e p="DataStructures.cs" t="Include" />
           <e p="EnemyInstrument.cs" t="Include" />
           <e p="Flicker.cs" t="Include" />
+          <e p="InstrumentSounds.cs" t="Include" />
           <e p="InstrumentSpawner.cs" t="Include" />
           <e p="MenuButton.cs" t="Include" />
           <e p="NumberRise.cs" t="Include" />
