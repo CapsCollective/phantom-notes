@@ -11,6 +11,7 @@ public class PlayerWeaponController : MonoBehaviour
     public Transform[] projSpawnLocations;
     public int weaponChangeSpeed;
     public AudioClip emptySound;
+    public AudioClip switchSound;
 
     //public Transform projSpawnLocation;
     
@@ -42,6 +43,7 @@ public class PlayerWeaponController : MonoBehaviour
             targetRot += 120 % 360;
             currentInstrument = GetWeapon(1);
             nextFire = Time.time + 0.2f;
+            SoundGuy.Instance.PlaySound(Vector3.zero, 1, switchSound);
         }
 
         if (changingWeapon)
@@ -89,10 +91,6 @@ public class PlayerWeaponController : MonoBehaviour
             {
                 SoundGuy.Instance.PlaySound(Vector3.zero, 1, emptySound);
             }
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            
         }
     }
 

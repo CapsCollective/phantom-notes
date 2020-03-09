@@ -257,6 +257,7 @@ MonoBehaviour:
   - {fileID: 0}
   weaponChangeSpeed: 200
   emptySound: {fileID: 8300000, guid: 718727d0445824b53b3b165e52ba4870, type: 3}
+  switchSound: {fileID: 8300000, guid: 70a8e16ea376c2e40a789e05502b86fc, type: 3}
 --- !u!82 &8731924829155182287
 AudioSource:
   m_ObjectHideFlags: 0
