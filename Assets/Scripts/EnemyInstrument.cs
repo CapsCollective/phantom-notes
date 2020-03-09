@@ -8,8 +8,10 @@ public class EnemyInstrument : MonoBehaviour
 {
     public GameObject pickupPrefab;
     public float knockBack;
+    public AudioClip hitSound;
     private AudioClip[] floatingSounds;
     private AudioClip[] deathSounds;
+    
 
     private PlayerController player;
     private float time = 1000;
@@ -103,10 +105,11 @@ public class EnemyInstrument : MonoBehaviour
 
     public void Damage(int value, TimeClick _timeClick)
     {
-
         int criticalWeight = (int)(_timeClick.criticalClickValue * 20); // 0 to 20
 
         value += criticalWeight;
+        
+        SoundGuy.Instance.PlaySound(transform.position, 1, hitSound);
 
         health -= value;
         NumberRise newNumberRise = Instantiate(numberRise, transform);
