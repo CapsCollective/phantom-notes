@@ -26,7 +26,6 @@ public class PickupInstrument : MonoBehaviour
         instrument = _instrument;
 
         Instantiate(_meshInstrument, transform);
-
     }
     
     void Update()

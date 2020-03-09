@@ -382,6 +382,8 @@ MonoBehaviour:
   floatingSounds:
   - {fileID: 8300000, guid: 4ff3af7cd468a434784e72ed956c9321, type: 3}
   - {fileID: 8300000, guid: bb6e3cc327dd2cf438157139e6067e3c, type: 3}
+  - {fileID: 8300000, guid: 1b52a2d58728bf543b05251444b632f1, type: 3}
+  - {fileID: 8300000, guid: 1d910ea11b3fcdb4cb92b7a3c4f3c768, type: 3}
   deathSounds:
   - {fileID: 8300000, guid: 82d98f6c23d9bab47acee26a422dd6f5, type: 3}
   - {fileID: 8300000, guid: a4a976f02383bdb4caf276550cefb170, type: 3}
