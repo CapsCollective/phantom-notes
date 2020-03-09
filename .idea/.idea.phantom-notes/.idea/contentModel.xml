@@ -127,6 +127,7 @@
           <e p="PlayerScoreController.cs" t="Include" />
           <e p="PlayerWeaponController.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="ProjectileSounds.cs" t="Include" />
           <e p="SoundGuy.cs" t="Include" />
           <e p="SoundScheduler.cs" t="Include" />
           <e p="TimeClick.cs" t="Include" />

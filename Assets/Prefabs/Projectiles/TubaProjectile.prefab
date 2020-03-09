@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 5107522740803997170}
   - component: {fileID: 5107522740803997171}
   - component: {fileID: 5107522740803997168}
-  - component: {fileID: 5107522740803997169}
   - component: {fileID: 5107522740803997174}
   - component: {fileID: 5107522740803997165}
-  - component: {fileID: 8596993232513566171}
+  - component: {fileID: 6280846941210829332}
+  - component: {fileID: 4497113783847572535}
+  - component: {fileID: 4043924233771986861}
   m_Layer: 9
-  m_Name: FluteProjectile
+  m_Name: TubaProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5107522740803997175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.244, y: 1.373, z: 0.684}
-  m_LocalScale: {x: 0.06, y: 0.2, z: 0.06}
+  m_LocalScale: {x: 1, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5107522740803997175}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &5107522740803997168
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -83,20 +84,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &5107522740803997169
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5107522740803997175}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5107522740803997174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ea67f388934eb48739dd6fbdef5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 20
-  instrument: 0
-  timeClickObj: {fileID: 8596993232513566171}
+  bulletSpeed: 18
+  instrument: 2
+  timeClickObj: {fileID: 6280846941210829332}
 --- !u!54 &5107522740803997165
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8596993232513566171
+--- !u!114 &6280846941210829332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,3 +128,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   criticalClickValue: 0
+--- !u!65 &4497113783847572535
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5107522740803997175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.72004056, y: 2, z: 0.6852348}
+  m_Center: {x: 0.0036320686, y: 0, z: 0.00068700314}
+--- !u!114 &4043924233771986861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5107522740803997175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a2140de012249a6bd5f5c9bef1b4e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: c1f906d4c42c1436ebf1d3a25e34162d, type: 3}
+  - {fileID: 8300000, guid: bdb2ac0d1ce37b442a1b9bf0486c6576, type: 3}
+  - {fileID: 8300000, guid: 91166e04b1eec9f409f6c64cef40a0ba, type: 3}

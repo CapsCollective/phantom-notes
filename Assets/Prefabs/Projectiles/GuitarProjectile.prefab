@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4539221918447051442}
   - component: {fileID: 2468200878529706106}
+  - component: {fileID: 6138330805038623280}
   m_Layer: 0
   m_Name: GuitarProjectile
   m_TagString: Untagged
@@ -47,6 +48,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0026ba6faa7b044f9b42838e940d9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  criticalClickValue: 0
+--- !u!114 &6138330805038623280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418358413379173831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a2140de012249a6bd5f5c9bef1b4e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: f96b7a7757458de4982da73014d717e7, type: 3}
+  - {fileID: 8300000, guid: 89b04f3f1eee75041b31928a4aa6a720, type: 3}
+  - {fileID: 8300000, guid: 1de52861694819b418eb55fc27d53f25, type: 3}
+  - {fileID: 8300000, guid: 9e5a01233945c74499d7cec6bf21c670, type: 3}
 --- !u!1001 &2236184769907777877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -289,6 +308,26 @@ PrefabInstance:
       propertyPath: timeClickObj
       value: 
       objectReference: {fileID: 2468200878529706106}
+    - target: {fileID: 5107522740803997174, guid: a999df2813e1c42f79792350335c7982,
+        type: 3}
+      propertyPath: sounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f96b7a7757458de4982da73014d717e7, type: 3}
+    - target: {fileID: 5107522740803997174, guid: a999df2813e1c42f79792350335c7982,
+        type: 3}
+      propertyPath: sounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 89b04f3f1eee75041b31928a4aa6a720, type: 3}
+    - target: {fileID: 5107522740803997174, guid: a999df2813e1c42f79792350335c7982,
+        type: 3}
+      propertyPath: sounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1de52861694819b418eb55fc27d53f25, type: 3}
+    - target: {fileID: 5107522740803997174, guid: a999df2813e1c42f79792350335c7982,
+        type: 3}
+      propertyPath: sounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e5a01233945c74499d7cec6bf21c670, type: 3}
     - target: {fileID: 5107522740803997175, guid: a999df2813e1c42f79792350335c7982,
         type: 3}
       propertyPath: m_Name
