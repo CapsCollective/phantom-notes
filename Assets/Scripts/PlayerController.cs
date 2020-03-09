@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float jumpClamp = 5;
 
     private float yaw, pitch;
-    
+
     private GameObject bodyObj;
     private Camera cam;
     private GameObject camObj;
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded && rb.velocity.y >= -0.1f)
             rb.velocity += new Vector3(0, jumpForce, 0);
-        
+
     }
 
 }

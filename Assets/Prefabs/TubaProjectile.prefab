@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ea67f388934eb48739dd6fbdef5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 4
+  bulletSpeed: 18
   instrument: 2
   timeClickObj: {fileID: 6280846941210829332}
 --- !u!54 &5107522740803997165
